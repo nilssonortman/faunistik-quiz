@@ -1,5 +1,7 @@
 // =====================================================================
-// Minimal faunistics quiz: species-level, vocab-only
+// Faunistics quiz: vocab-only
+// - Species-level quiz (working base)
+// - Genus-level quiz built from the same vocab
 // Images & attribution are pre-baked in the vocab JSON (exampleObservation).
 // =====================================================================
 
@@ -22,10 +24,13 @@ const CONFIG = {
 };
 
 // ---------------- STATE -----------------------------------------------
-let vocabByGroup = {}; // { groupKey: [vocabEntry, ...] }
-let quizQuestions = []; // [{ correct, options }]
+let vocabByGroup = {};       // { groupKey: [speciesEntry, ...] }
+let genusVocabByGroup = {};  // { groupKey: [ { genusName, swedishName, representative }, ... ] }
+
+let quizQuestions = [];      // [{ correct, options }]
 let currentIndex = 0;
 let score = 0;
+let currentLevel = "species"; // "species" | "genus" (family later)
 
 // ---------------- DOM ELEMENTS ----------------------------------------
 const statusEl = document.getElementById("status");
@@ -38,6 +43,7 @@ const imageWrapperEl = document.getElementById("image-wrapper");
 const answersEl = document.getElementById("answers");
 const attributionEl = document.getElementById("attribution");
 const nextBtn = document.getElementById("next-btn");
+const levelSelectEl = document.getElementById("level-select");
 
 // ---------------- HELPERS ---------------------------------------------
 
@@ -55,7 +61,8 @@ function pickRandomSubset(array, n) {
   return shuffleArray(array).slice(0, n);
 }
 
-function formatSpeciesLabel(scientificName, swedishName) {
+// generic label helper (works for species & genus)
+function formatLabel(scientificName, swedishName) {
   return swedishName ? `${scientificName} (${swedishName})` : scientificName;
 }
 
@@ -77,6 +84,7 @@ async function loadVocab() {
       }
       const data = await res.json();
       const list = Array.isArray(data) ? data : [];
+
       // Keep only entries that actually have an exampleObservation with photoUrl
       const filtered = list.filter(
         (e) =>
@@ -98,7 +106,35 @@ async function loadVocab() {
   vocabByGroup = result;
 }
 
-// ---------------- BUILD QUIZ (SPECIES FROM VOCAB) ---------------------
+// Build genus-level derived vocab from species vocab
+function buildGenusVocabFromSpecies() {
+  const result = {};
+
+  for (const [groupKey, speciesList] of Object.entries(vocabByGroup)) {
+    const genusMap = new Map(); // genusName -> { genusName, swedishName, representative }
+
+    for (const sp of speciesList) {
+      const g = sp.genusName;
+      if (!g) continue;
+
+      if (!genusMap.has(g)) {
+        genusMap.set(g, {
+          genusName: g,
+          swedishName: sp.swedishName || null, // borrow first species' Swedish name as hint
+          representative: sp,                  // store species entry as representative for photos
+        });
+      }
+    }
+
+    const genera = Array.from(genusMap.values());
+    result[groupKey] = genera;
+    console.log(`Built ${genera.length} genera for group "${groupKey}"`);
+  }
+
+  genusVocabByGroup = result;
+}
+
+// ---------------- BUILD QUIZ: SPECIES LEVEL ---------------------------
 
 async function buildSpeciesQuizQuestionsFromVocab() {
   const neededDistractors = CONFIG.OPTIONS_PER_QUESTION - 1;
@@ -110,7 +146,7 @@ async function buildSpeciesQuizQuestionsFromVocab() {
   );
 
   console.log(
-    "Available groups for vocab quiz:",
+    "Available groups for species quiz:",
     availableGroups.map(([k, list]) => [k, list.length])
   );
 
@@ -152,25 +188,27 @@ async function buildSpeciesQuizQuestionsFromVocab() {
 
     const options = [
       {
-        taxonId: correctEntry.taxonId,
-        scientificName: correctEntry.scientificName,
-        swedishName: correctEntry.swedishName,
+        key: String(correctEntry.taxonId), // species: key = taxonId
+        labelSci: correctEntry.scientificName,
+        labelSwe: correctEntry.swedishName,
       },
       ...distractorEntries.map((d) => ({
-        taxonId: d.taxonId,
-        scientificName: d.scientificName,
-        swedishName: d.swedishName,
+        key: String(d.taxonId),
+        labelSci: d.scientificName,
+        labelSwe: d.swedishName,
       })),
     ];
 
     questions.push({
       correct: {
-        // Use vocab for naming + exampleObservation for image/attribution
+        // For answer checking:
+        answerKey: String(correctEntry.taxonId),
+        labelSci: correctEntry.scientificName,
+        labelSwe: correctEntry.swedishName,
+
+        // For image & attribution:
         obsId: ex.obsId,
-        taxonId: correctEntry.taxonId,
         photoUrl: ex.photoUrl,
-        scientificName: correctEntry.scientificName,
-        swedishName: correctEntry.swedishName,
         observer: ex.observer || "okänd",
         licenseCode: ex.licenseCode || null,
         obsUrl: ex.obsUrl || "#",
@@ -181,9 +219,125 @@ async function buildSpeciesQuizQuestionsFromVocab() {
   }
 
   console.log(
-    `Finished building questions: ${questions.length} questions after ${attempts} attempts`
+    `Species quiz: built ${questions.length} questions after ${attempts} attempts`
   );
   return questions;
+}
+
+// ---------------- BUILD QUIZ: GENUS LEVEL -----------------------------
+
+async function buildGenusQuizQuestionsFromVocab() {
+  const neededDistractors = CONFIG.OPTIONS_PER_QUESTION - 1;
+  const questions = [];
+
+  const availableGroups = Object.entries(genusVocabByGroup).filter(
+    ([, list]) => list && list.length > neededDistractors
+  );
+
+  console.log(
+    "Available groups for genus quiz:",
+    availableGroups.map(([k, list]) => [k, list.length])
+  );
+
+  if (!availableGroups.length) {
+    console.warn("No groups with enough genera to build genus-level questions.");
+    return [];
+  }
+
+  let attempts = 0;
+  const MAX_ATTEMPTS = 200;
+
+  while (
+    questions.length < CONFIG.QUESTIONS_COUNT &&
+    attempts < MAX_ATTEMPTS
+  ) {
+    attempts++;
+
+    const [groupKey, genusList] =
+      availableGroups[Math.floor(Math.random() * availableGroups.length)];
+    if (!genusList || genusList.length <= neededDistractors) continue;
+
+    // 1) Pick a genus
+    const correctGenus = genusList[Math.floor(Math.random() * genusList.length)];
+    const repSpecies = correctGenus.representative;
+    const ex = repSpecies.exampleObservation;
+    if (!ex || !ex.photoUrl) {
+      console.warn(
+        "No exampleObservation for representative of genus",
+        correctGenus.genusName,
+        "– skipping."
+      );
+      continue;
+    }
+
+    // 2) Build distractor genera from same group
+    const pool = genusList.filter(
+      (g) => g.genusName !== correctGenus.genusName
+    );
+    if (pool.length < neededDistractors) continue;
+
+    const distractorGenera = pickRandomSubset(pool, neededDistractors);
+
+    const options = [
+      {
+        key: correctGenus.genusName, // genus: key = genusName
+        labelSci: correctGenus.genusName,
+        labelSwe: correctGenus.swedishName,
+      },
+      ...distractorGenera.map((g) => ({
+        key: g.genusName,
+        labelSci: g.genusName,
+        labelSwe: g.swedishName,
+      })),
+    ];
+
+    questions.push({
+      correct: {
+        answerKey: correctGenus.genusName,
+        labelSci: correctGenus.genusName,
+        labelSwe: correctGenus.swedishName,
+
+        obsId: ex.obsId,
+        photoUrl: ex.photoUrl,
+        observer: ex.observer || "okänd",
+        licenseCode: ex.licenseCode || null,
+        obsUrl: ex.obsUrl || "#",
+        groupKey,
+      },
+      options: shuffleArray(options),
+    });
+  }
+
+  console.log(
+    `Genus quiz: built ${questions.length} questions after ${attempts} attempts`
+  );
+  return questions;
+}
+
+// ---------------- REBUILD QUIZ FOR CURRENT LEVEL ----------------------
+
+async function rebuildQuizForCurrentLevel() {
+  statusEl.textContent = "Bygger frågor från vokabulären…";
+  quizQuestions = [];
+
+  if (currentLevel === "species") {
+    quizQuestions = await buildSpeciesQuizQuestionsFromVocab();
+  } else if (currentLevel === "genus") {
+    quizQuestions = await buildGenusQuizQuestionsFromVocab();
+  }
+
+  currentIndex = 0;
+  score = 0;
+
+  if (!quizQuestions.length) {
+    statusEl.textContent =
+      "Kunde inte skapa några frågor. Testa en annan nivå eller kontrollera JSON-filerna.";
+    questionContainerEl.classList.add("hidden");
+    nextBtn.classList.add("hidden");
+    return;
+  }
+
+  renderQuestion();
 }
 
 // ---------------- RENDERING -------------------------------------------
@@ -236,11 +390,8 @@ function renderQuestion() {
   options.forEach((opt) => {
     const btn = document.createElement("button");
     btn.className = "answer-btn";
-    btn.textContent = formatSpeciesLabel(
-      opt.scientificName,
-      opt.swedishName
-    );
-    btn.dataset.taxonId = String(opt.taxonId);
+    btn.textContent = formatLabel(opt.labelSci, opt.labelSwe);
+    btn.dataset.key = opt.key;
     btn.addEventListener("click", () => handleAnswerClick(btn, correct));
     answersEl.appendChild(btn);
   });
@@ -256,9 +407,9 @@ function handleAnswerClick(clickedBtn, correct) {
     b.disabled = true;
   });
 
-  const chosenTaxonId = clickedBtn.dataset.taxonId;
-  const correctTaxonId = String(correct.taxonId);
-  const isCorrect = chosenTaxonId === correctTaxonId;
+  const chosenKey = clickedBtn.dataset.key;
+  const correctKey = String(correct.answerKey);
+  const isCorrect = chosenKey === correctKey;
 
   if (isCorrect) {
     clickedBtn.classList.add("correct");
@@ -266,17 +417,15 @@ function handleAnswerClick(clickedBtn, correct) {
   } else {
     clickedBtn.classList.add("incorrect");
     buttons.forEach((b) => {
-      if (b.dataset.taxonId === correctTaxonId) {
+      if (b.dataset.key === correctKey) {
         b.classList.add("correct");
       }
     });
   }
 
-  const label = formatSpeciesLabel(
-    correct.scientificName,
-    correct.swedishName
-  );
-  statusEl.textContent = `Korrekt art: ${label}`;
+  const label = formatLabel(correct.labelSci, correct.labelSwe);
+  const levelWord = currentLevel === "genus" ? "släkte" : "art";
+  statusEl.textContent = `Korrekt ${levelWord}: ${label}`;
 
   nextBtn.classList.remove("hidden");
   scoreEl.textContent = `Poäng: ${score} / ${quizQuestions.length}`;
@@ -300,19 +449,13 @@ async function initQuiz() {
 
   try {
     await loadVocab();
+    buildGenusVocabFromSpecies();
 
-    statusEl.textContent = "Bygger frågor från vokabulären…";
-    quizQuestions = await buildSpeciesQuizQuestionsFromVocab();
-    currentIndex = 0;
-    score = 0;
-
-    if (!quizQuestions.length) {
-      statusEl.textContent =
-        "Kunde inte skapa några frågor. Kontrollera JSON-filerna.";
-      return;
+    if (levelSelectEl) {
+      levelSelectEl.value = currentLevel;
     }
 
-    renderQuestion();
+    await rebuildQuizForCurrentLevel();
   } catch (err) {
     console.error(err);
     statusEl.textContent =
@@ -325,6 +468,13 @@ nextBtn.addEventListener("click", () => {
   currentIndex += 1;
   renderQuestion();
 });
+
+if (levelSelectEl) {
+  levelSelectEl.addEventListener("change", async () => {
+    currentLevel = levelSelectEl.value || "species";
+    await rebuildQuizForCurrentLevel();
+  });
+}
 
 // Start the quiz
 initQuiz();
