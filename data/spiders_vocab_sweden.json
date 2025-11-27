@@ -6,7 +6,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 52628,
-    "obsCount": 1199
+    "obsCount": 1199,
+    "exampleObservation": {
+      "obsId": 328392475,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595057317/large.jpg",
+      "observer": "neomorphus",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328392475"
+    }
   },
   {
     "scientificName": "Misumena vatia",
@@ -15,7 +22,14 @@
     "familyName": "Thomisidae",
     "rank": "species",
     "taxonId": 55746,
-    "obsCount": 666
+    "obsCount": 666,
+    "exampleObservation": {
+      "obsId": 323671117,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585700201/large.jpg",
+      "observer": "berlin908",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323671117"
+    }
   },
   {
     "scientificName": "Eratigena atrica",
@@ -24,7 +38,14 @@
     "familyName": "Agelenidae",
     "rank": "species",
     "taxonId": 751174,
-    "obsCount": 625
+    "obsCount": 625,
+    "exampleObservation": {
+      "obsId": 326682925,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591704345/large.jpg",
+      "observer": "gavia_arctica",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326682925"
+    }
   },
   {
     "scientificName": "Pisaura mirabilis",
@@ -33,7 +54,14 @@
     "familyName": "Pisauridae",
     "rank": "species",
     "taxonId": 55787,
-    "obsCount": 595
+    "obsCount": 595,
+    "exampleObservation": {
+      "obsId": 325202128,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/588754629/large.jpg",
+      "observer": "loketoke",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325202128"
+    }
   },
   {
     "scientificName": "Nuctenea umbratica",
@@ -42,7 +70,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 130092,
-    "obsCount": 521
+    "obsCount": 521,
+    "exampleObservation": {
+      "obsId": 328392470,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595057389/large.jpg",
+      "observer": "neomorphus",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328392470"
+    }
   },
   {
     "scientificName": "Salticus scenicus",
@@ -51,7 +86,14 @@
     "familyName": "Salticidae",
     "rank": "species",
     "taxonId": 68901,
-    "obsCount": 483
+    "obsCount": 483,
+    "exampleObservation": {
+      "obsId": 327892125,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594083279/large.jpg",
+      "observer": "karin_coenobita",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327892125"
+    }
   },
   {
     "scientificName": "Marpissa muscosa",
@@ -60,7 +102,14 @@
     "familyName": "Salticidae",
     "rank": "species",
     "taxonId": 146723,
-    "obsCount": 331
+    "obsCount": 331,
+    "exampleObservation": {
+      "obsId": 327581346,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593494916/large.jpg",
+      "observer": "tim-tas",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327581346"
+    }
   },
   {
     "scientificName": "Steatoda bipunctata",
@@ -69,7 +118,14 @@
     "familyName": "Theridiidae",
     "rank": "species",
     "taxonId": 146685,
-    "obsCount": 293
+    "obsCount": 293,
+    "exampleObservation": {
+      "obsId": 325835022,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590018157/large.jpg",
+      "observer": "henkegarlov",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325835022"
+    }
   },
   {
     "scientificName": "Larinioides sclopetarius",
@@ -78,7 +134,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 538959,
-    "obsCount": 277
+    "obsCount": 277,
+    "exampleObservation": {
+      "obsId": 324508186,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/587361459/large.jpg",
+      "observer": "diegodgd",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/324508186"
+    }
   },
   {
     "scientificName": "Zygiella x-notata",
@@ -87,7 +150,14 @@
     "familyName": "Phonognathidae",
     "rank": "species",
     "taxonId": 155279,
-    "obsCount": 266
+    "obsCount": 266,
+    "exampleObservation": {
+      "obsId": 327357491,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593052695/large.jpg",
+      "observer": "thlarsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327357491"
+    }
   },
   {
     "scientificName": "Dolomedes fimbriatus",
@@ -96,7 +166,14 @@
     "familyName": "Dolomedidae",
     "rank": "species",
     "taxonId": 121778,
-    "obsCount": 263
+    "obsCount": 263,
+    "exampleObservation": {
+      "obsId": 322934486,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584279804/large.jpg",
+      "observer": "johannesfabo",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322934486"
+    }
   },
   {
     "scientificName": "Micrommata virescens",
@@ -105,7 +182,14 @@
     "familyName": "Sparassidae",
     "rank": "species",
     "taxonId": 121766,
-    "obsCount": 235
+    "obsCount": 235,
+    "exampleObservation": {
+      "obsId": 325387492,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589124112/large.jpg",
+      "observer": "ulrikbp",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325387492"
+    }
   },
   {
     "scientificName": "Acantholycosa lignaria",
@@ -114,7 +198,14 @@
     "familyName": "Lycosidae",
     "rank": "species",
     "taxonId": 533746,
-    "obsCount": 227
+    "obsCount": 227,
+    "exampleObservation": {
+      "obsId": 323683530,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585724913/large.jpg",
+      "observer": "andreass1",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323683530"
+    }
   },
   {
     "scientificName": "Philodromus margaritatus",
@@ -123,7 +214,14 @@
     "familyName": "Philodromidae",
     "rank": "species",
     "taxonId": 360677,
-    "obsCount": 217
+    "obsCount": 217,
+    "exampleObservation": {
+      "obsId": 327348349,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593034744/large.jpg",
+      "observer": "noah99333",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327348349"
+    }
   },
   {
     "scientificName": "Araneus quadratus",
@@ -132,7 +230,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 121782,
-    "obsCount": 194
+    "obsCount": 194,
+    "exampleObservation": {
+      "obsId": 323844768,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586037443/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323844768"
+    }
   },
   {
     "scientificName": "Scotophaeus blackwalli",
@@ -141,7 +246,14 @@
     "familyName": "Gnaphosidae",
     "rank": "species",
     "taxonId": 206295,
-    "obsCount": 194
+    "obsCount": 194,
+    "exampleObservation": {
+      "obsId": 304078311,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/548131194/large.jpg",
+      "observer": "mazeson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/304078311"
+    }
   },
   {
     "scientificName": "Metellina segmentata",
@@ -150,7 +262,14 @@
     "familyName": "Tetragnathidae",
     "rank": "species",
     "taxonId": 55621,
-    "obsCount": 181
+    "obsCount": 181,
+    "exampleObservation": {
+      "obsId": 243566789,
+      "photoUrl": "https://static.inaturalist.org/photos/434335175/large.jpeg",
+      "observer": "spodolf",
+      "licenseCode": null,
+      "obsUrl": "https://www.inaturalist.org/observations/243566789"
+    }
   },
   {
     "scientificName": "Argiope bruennichi",
@@ -159,7 +278,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 50867,
-    "obsCount": 172
+    "obsCount": 172,
+    "exampleObservation": {
+      "obsId": 328340154,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594953967/large.jpg",
+      "observer": "lizamast",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328340154"
+    }
   },
   {
     "scientificName": "Enoplognatha ovata",
@@ -168,7 +294,14 @@
     "familyName": "Theridiidae",
     "rank": "species",
     "taxonId": 219195,
-    "obsCount": 171
+    "obsCount": 171,
+    "exampleObservation": {
+      "obsId": 303465750,
+      "photoUrl": "https://static.inaturalist.org/photos/546967544/large.jpg",
+      "observer": "nature_yb",
+      "licenseCode": null,
+      "obsUrl": "https://www.inaturalist.org/observations/303465750"
+    }
   },
   {
     "scientificName": "Araniella cucurbitina",
@@ -177,7 +310,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 129017,
-    "obsCount": 158
+    "obsCount": 158,
+    "exampleObservation": {
+      "obsId": 311212647,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/561769267/large.jpg",
+      "observer": "pricken45",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/311212647"
+    }
   },
   {
     "scientificName": "Evarcha falcata",
@@ -186,7 +326,14 @@
     "familyName": "Salticidae",
     "rank": "species",
     "taxonId": 61761,
-    "obsCount": 157
+    "obsCount": 157,
+    "exampleObservation": {
+      "obsId": 311661869,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/562635321/large.jpg",
+      "observer": "pwiksten",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/311661869"
+    }
   },
   {
     "scientificName": "Tegenaria domestica",
@@ -195,7 +342,14 @@
     "familyName": "Agelenidae",
     "rank": "species",
     "taxonId": 153507,
-    "obsCount": 150
+    "obsCount": 150,
+    "exampleObservation": {
+      "obsId": 324283068,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586908882/large.jpg",
+      "observer": "arkantor",
+      "licenseCode": "cc-by-nc-sa",
+      "obsUrl": "https://www.inaturalist.org/observations/324283068"
+    }
   },
   {
     "scientificName": "Agelena labyrinthica",
@@ -204,7 +358,14 @@
     "familyName": "Agelenidae",
     "rank": "species",
     "taxonId": 130304,
-    "obsCount": 146
+    "obsCount": 146,
+    "exampleObservation": {
+      "obsId": 325505048,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589346357/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325505048"
+    }
   },
   {
     "scientificName": "Pholcus phalangioides",
@@ -213,7 +374,14 @@
     "familyName": "Pholcidae",
     "rank": "species",
     "taxonId": 67328,
-    "obsCount": 140
+    "obsCount": 140,
+    "exampleObservation": {
+      "obsId": 324359098,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/587057639/large.jpg",
+      "observer": "andreas_emanuelsson-gbg-swe",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/324359098"
+    }
   },
   {
     "scientificName": "Meta menardi",
@@ -222,7 +390,14 @@
     "familyName": "Tetragnathidae",
     "rank": "species",
     "taxonId": 224958,
-    "obsCount": 140
+    "obsCount": 140,
+    "exampleObservation": {
+      "obsId": 323683251,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585724488/large.jpg",
+      "observer": "andreass1",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323683251"
+    }
   },
   {
     "scientificName": "Aelurillus v-insignitus",
@@ -231,7 +406,14 @@
     "familyName": "Salticidae",
     "rank": "species",
     "taxonId": 130287,
-    "obsCount": 134
+    "obsCount": 134,
+    "exampleObservation": {
+      "obsId": 322044033,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582488720/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322044033"
+    }
   },
   {
     "scientificName": "Textrix denticulata",
@@ -240,7 +422,14 @@
     "familyName": "Agelenidae",
     "rank": "species",
     "taxonId": 335613,
-    "obsCount": 120
+    "obsCount": 120,
+    "exampleObservation": {
+      "obsId": 319154828,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/576892199/large.jpg",
+      "observer": "norre007",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/319154828"
+    }
   },
   {
     "scientificName": "Trochosa ruricola",
@@ -249,7 +438,14 @@
     "familyName": "Lycosidae",
     "rank": "species",
     "taxonId": 233038,
-    "obsCount": 109
+    "obsCount": 109,
+    "exampleObservation": {
+      "obsId": 307494336,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/554636287/large.jpg",
+      "observer": "pricken45",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/307494336"
+    }
   },
   {
     "scientificName": "Attulus terebratus",
@@ -258,7 +454,14 @@
     "familyName": "Salticidae",
     "rank": "species",
     "taxonId": 1070901,
-    "obsCount": 103
+    "obsCount": 103,
+    "exampleObservation": {
+      "obsId": 311650036,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/578940792/large.jpg",
+      "observer": "co2fe_insect",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/311650036"
+    }
   },
   {
     "scientificName": "Xysticus ulmi",
@@ -267,7 +470,14 @@
     "familyName": "Thomisidae",
     "rank": "species",
     "taxonId": 496641,
-    "obsCount": 101
+    "obsCount": 101,
+    "exampleObservation": {
+      "obsId": 322044071,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582488119/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322044071"
+    }
   },
   {
     "scientificName": "Diaea dorsata",
@@ -276,7 +486,14 @@
     "familyName": "Thomisidae",
     "rank": "species",
     "taxonId": 207955,
-    "obsCount": 91
+    "obsCount": 91,
+    "exampleObservation": {
+      "obsId": 326855079,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592046854/large.jpg",
+      "observer": "neomorphus",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326855079"
+    }
   },
   {
     "scientificName": "Larinioides cornutus",
@@ -285,7 +502,14 @@
     "familyName": "Araneidae",
     "rank": "species",
     "taxonId": 126513,
-    "obsCount": 90
+    "obsCount": 90,
+    "exampleObservation": {
+      "obsId": 313338610,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/565837288/large.jpg",
+      "observer": "stijan",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/313338610"
+    }
   },
   {
     "scientificName": "Segestria senoculata",
@@ -294,7 +518,14 @@
     "familyName": "Segestriidae",
     "rank": "species",
     "taxonId": 318909,
-    "obsCount": 89
+    "obsCount": 89,
+    "exampleObservation": {
+      "obsId": 320215684,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/578922892/large.jpg",
+      "observer": "pricken45",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/320215684"
+    }
   },
   {
     "scientificName": "Anyphaena accentuata",
@@ -303,7 +534,14 @@
     "familyName": "Anyphaenidae",
     "rank": "species",
     "taxonId": 319828,
-    "obsCount": 87
+    "obsCount": 87,
+    "exampleObservation": {
+      "obsId": 326599811,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591541758/large.jpg",
+      "observer": "abcdefghijklmno",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326599811"
+    }
   },
   {
     "scientificName": "Trochosa terricola",
@@ -312,6 +550,13 @@
     "familyName": "Lycosidae",
     "rank": "species",
     "taxonId": 148394,
-    "obsCount": 84
+    "obsCount": 84,
+    "exampleObservation": {
+      "obsId": 317249554,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/573248007/large.jpg",
+      "observer": "pricken45",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/317249554"
+    }
   }
 ]

@@ -6,7 +6,14 @@
     "familyName": "Hypnaceae",
     "rank": "species",
     "taxonId": 163992,
-    "obsCount": 674
+    "obsCount": 674,
+    "exampleObservation": {
+      "obsId": 326858527,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592051471/large.jpg",
+      "observer": "palebluedotterel",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326858527"
+    }
   },
   {
     "scientificName": "Hylocomium splendens",
@@ -15,7 +22,14 @@
     "familyName": "Hylocomiaceae",
     "rank": "species",
     "taxonId": 122555,
-    "obsCount": 659
+    "obsCount": 659,
+    "exampleObservation": {
+      "obsId": 328076583,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425297/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076583"
+    }
   },
   {
     "scientificName": "Polytrichum commune",
@@ -24,7 +38,14 @@
     "familyName": "Polytrichaceae",
     "rank": "species",
     "taxonId": 68293,
-    "obsCount": 447
+    "obsCount": 447,
+    "exampleObservation": {
+      "obsId": 321011804,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580492930/large.jpg",
+      "observer": "veesvee",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321011804"
+    }
   },
   {
     "scientificName": "Hylocomiadelphus triquetrus",
@@ -33,7 +54,14 @@
     "familyName": "Hylocomiaceae",
     "rank": "species",
     "taxonId": 1138381,
-    "obsCount": 447
+    "obsCount": 447,
+    "exampleObservation": {
+      "obsId": 328076610,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425378/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076610"
+    }
   },
   {
     "scientificName": "Polytrichum formosum",
@@ -42,7 +70,14 @@
     "familyName": "Polytrichaceae",
     "rank": "species",
     "taxonId": 68290,
-    "obsCount": 428
+    "obsCount": 428,
+    "exampleObservation": {
+      "obsId": 324296772,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586936671/large.jpg",
+      "observer": "vesper",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/324296772"
+    }
   },
   {
     "scientificName": "Pleurozium schreberi",
@@ -51,7 +86,14 @@
     "familyName": "Hylocomiaceae",
     "rank": "species",
     "taxonId": 130677,
-    "obsCount": 405
+    "obsCount": 405,
+    "exampleObservation": {
+      "obsId": 328076589,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425314/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076589"
+    }
   },
   {
     "scientificName": "Dicranum scoparium",
@@ -60,7 +102,14 @@
     "familyName": "Dicranaceae",
     "rank": "species",
     "taxonId": 123134,
-    "obsCount": 340
+    "obsCount": 340,
+    "exampleObservation": {
+      "obsId": 321241314,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580939314/large.jpg",
+      "observer": "emilialennartsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321241314"
+    }
   },
   {
     "scientificName": "Leucobryum glaucum",
@@ -69,7 +118,14 @@
     "familyName": "Leucobryaceae",
     "rank": "species",
     "taxonId": 122658,
-    "obsCount": 339
+    "obsCount": 339,
+    "exampleObservation": {
+      "obsId": 326777759,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591991099/large.jpg",
+      "observer": "abcdefghijklmno",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326777759"
+    }
   },
   {
     "scientificName": "Ptilium crista-castrensis",
@@ -78,7 +134,14 @@
     "familyName": "Pylaisiaceae",
     "rank": "species",
     "taxonId": 136604,
-    "obsCount": 303
+    "obsCount": 303,
+    "exampleObservation": {
+      "obsId": 328076596,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425346/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076596"
+    }
   },
   {
     "scientificName": "Mnium hornum",
@@ -87,7 +150,14 @@
     "familyName": "Mniaceae",
     "rank": "species",
     "taxonId": 165489,
-    "obsCount": 289
+    "obsCount": 289,
+    "exampleObservation": {
+      "obsId": 325470183,
+      "photoUrl": "https://static.inaturalist.org/photos/589292077/large.jpg",
+      "observer": "jessica_90",
+      "licenseCode": null,
+      "obsUrl": "https://www.inaturalist.org/observations/325470183"
+    }
   },
   {
     "scientificName": "Rhytidiadelphus squarrosus",
@@ -96,7 +166,14 @@
     "familyName": "Hylocomiaceae",
     "rank": "species",
     "taxonId": 123754,
-    "obsCount": 269
+    "obsCount": 269,
+    "exampleObservation": {
+      "obsId": 326152370,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590652691/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/326152370"
+    }
   },
   {
     "scientificName": "Plagiomnium undulatum",
@@ -105,7 +182,14 @@
     "familyName": "Mniaceae",
     "rank": "species",
     "taxonId": 208078,
-    "obsCount": 264
+    "obsCount": 264,
+    "exampleObservation": {
+      "obsId": 328076618,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425423/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076618"
+    }
   },
   {
     "scientificName": "Plagiothecium undulatum",
@@ -114,7 +198,14 @@
     "familyName": "Plagiotheciaceae",
     "rank": "species",
     "taxonId": 123586,
-    "obsCount": 211
+    "obsCount": 211,
+    "exampleObservation": {
+      "obsId": 325670440,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589688573/large.jpg",
+      "observer": "vesper",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325670440"
+    }
   },
   {
     "scientificName": "Polytrichum piliferum",
@@ -123,7 +214,14 @@
     "familyName": "Polytrichaceae",
     "rank": "species",
     "taxonId": 67905,
-    "obsCount": 186
+    "obsCount": 186,
+    "exampleObservation": {
+      "obsId": 313166178,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/565502689/large.jpg",
+      "observer": "astronautovic",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/313166178"
+    }
   },
   {
     "scientificName": "Polytrichum juniperinum",
@@ -132,7 +230,14 @@
     "familyName": "Polytrichaceae",
     "rank": "species",
     "taxonId": 68286,
-    "obsCount": 183
+    "obsCount": 183,
+    "exampleObservation": {
+      "obsId": 323172002,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584748196/large.jpg",
+      "observer": "anna_hallberg",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323172002"
+    }
   },
   {
     "scientificName": "Homalothecium sericeum",
@@ -141,7 +246,14 @@
     "familyName": "Brachytheciaceae",
     "rank": "species",
     "taxonId": 123776,
-    "obsCount": 176
+    "obsCount": 176,
+    "exampleObservation": {
+      "obsId": 321372426,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/581198215/large.jpg",
+      "observer": "haidia",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321372426"
+    }
   },
   {
     "scientificName": "Hedwigia ciliata",
@@ -150,7 +262,14 @@
     "familyName": "Hedwigiaceae",
     "rank": "species",
     "taxonId": 163550,
-    "obsCount": 173
+    "obsCount": 173,
+    "exampleObservation": {
+      "obsId": 321245811,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580947926/large.jpg",
+      "observer": "emilialennartsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321245811"
+    }
   },
   {
     "scientificName": "Radula complanata",
@@ -159,7 +278,14 @@
     "familyName": "Radulaceae",
     "rank": "species",
     "taxonId": 67842,
-    "obsCount": 173
+    "obsCount": 173,
+    "exampleObservation": {
+      "obsId": 326192002,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590727895/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/326192002"
+    }
   },
   {
     "scientificName": "Marchantia polymorpha",
@@ -168,7 +294,14 @@
     "familyName": "Marchantiaceae",
     "rank": "species",
     "taxonId": 56406,
-    "obsCount": 172
+    "obsCount": 172,
+    "exampleObservation": {
+      "obsId": 325505191,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589338010/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325505191"
+    }
   },
   {
     "scientificName": "Climacium dendroides",
@@ -177,7 +310,14 @@
     "familyName": "Climaciaceae",
     "rank": "species",
     "taxonId": 123751,
-    "obsCount": 159
+    "obsCount": 159,
+    "exampleObservation": {
+      "obsId": 323696518,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585721628/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323696518"
+    }
   },
   {
     "scientificName": "Ceratodon purpureus",
@@ -186,7 +326,14 @@
     "familyName": "Ditrichaceae",
     "rank": "species",
     "taxonId": 123117,
-    "obsCount": 157
+    "obsCount": 157,
+    "exampleObservation": {
+      "obsId": 293079073,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/527480107/large.jpg",
+      "observer": "marcinklisz",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/293079073"
+    }
   },
   {
     "scientificName": "Ptilidium pulcherrimum",
@@ -195,7 +342,14 @@
     "familyName": "Ptilidiaceae",
     "rank": "species",
     "taxonId": 167558,
-    "obsCount": 151
+    "obsCount": 151,
+    "exampleObservation": {
+      "obsId": 322196107,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582816864/large.jpg",
+      "observer": "lonicera-peri",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322196107"
+    }
   },
   {
     "scientificName": "Pseudoscleropodium purum",
@@ -204,7 +358,14 @@
     "familyName": "Brachytheciaceae",
     "rank": "species",
     "taxonId": 123645,
-    "obsCount": 148
+    "obsCount": 148,
+    "exampleObservation": {
+      "obsId": 325735848,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589763603/large.jpg",
+      "observer": "esdena",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325735848"
+    }
   },
   {
     "scientificName": "Thuidium tamariscinum",
@@ -213,7 +374,14 @@
     "familyName": "Thuidiaceae",
     "rank": "species",
     "taxonId": 127055,
-    "obsCount": 146
+    "obsCount": 146,
+    "exampleObservation": {
+      "obsId": 325735874,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589776104/large.jpg",
+      "observer": "esdena",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325735874"
+    }
   },
   {
     "scientificName": "Sphagnum capillifolium",
@@ -222,7 +390,14 @@
     "familyName": "Sphagnaceae",
     "rank": "species",
     "taxonId": 123958,
-    "obsCount": 144
+    "obsCount": 144,
+    "exampleObservation": {
+      "obsId": 319539698,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/577629842/large.jpg",
+      "observer": "anna_hallberg",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/319539698"
+    }
   },
   {
     "scientificName": "Atrichum undulatum",
@@ -231,7 +406,14 @@
     "familyName": "Polytrichaceae",
     "rank": "species",
     "taxonId": 124155,
-    "obsCount": 143
+    "obsCount": 143,
+    "exampleObservation": {
+      "obsId": 328076608,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425369/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076608"
+    }
   },
   {
     "scientificName": "Plagiomnium affine",
@@ -240,7 +422,14 @@
     "familyName": "Mniaceae",
     "rank": "species",
     "taxonId": 485472,
-    "obsCount": 142
+    "obsCount": 142,
+    "exampleObservation": {
+      "obsId": 321246072,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580948399/large.jpg",
+      "observer": "emilialennartsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321246072"
+    }
   },
   {
     "scientificName": "Rhytidiadelphus loreus",
@@ -249,7 +438,14 @@
     "familyName": "Hylocomiaceae",
     "rank": "species",
     "taxonId": 124422,
-    "obsCount": 141
+    "obsCount": 141,
+    "exampleObservation": {
+      "obsId": 323442790,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585247769/large.jpg",
+      "observer": "humulus",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323442790"
+    }
   },
   {
     "scientificName": "Racomitrium lanuginosum",
@@ -258,7 +454,14 @@
     "familyName": "Grimmiaceae",
     "rank": "species",
     "taxonId": 167684,
-    "obsCount": 140
+    "obsCount": 140,
+    "exampleObservation": {
+      "obsId": 321244815,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580945939/large.jpg",
+      "observer": "emilialennartsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321244815"
+    }
   },
   {
     "scientificName": "Syntrichia ruralis",
@@ -267,7 +470,14 @@
     "familyName": "Pottiaceae",
     "rank": "species",
     "taxonId": 244075,
-    "obsCount": 132
+    "obsCount": 132,
+    "exampleObservation": {
+      "obsId": 320396701,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/579282050/large.jpg",
+      "observer": "anna_hallberg",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/320396701"
+    }
   },
   {
     "scientificName": "Metzgeria furcata",
@@ -276,7 +486,14 @@
     "familyName": "Metzgeriaceae",
     "rank": "species",
     "taxonId": 165363,
-    "obsCount": 130
+    "obsCount": 130,
+    "exampleObservation": {
+      "obsId": 303260545,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/546570856/large.jpg",
+      "observer": "sloppydemon",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/303260545"
+    }
   },
   {
     "scientificName": "Grimmia pulvinata",
@@ -285,7 +502,14 @@
     "familyName": "Grimmiaceae",
     "rank": "species",
     "taxonId": 56117,
-    "obsCount": 128
+    "obsCount": 128,
+    "exampleObservation": {
+      "obsId": 294681733,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/530425944/large.jpg",
+      "observer": "marcinklisz",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/294681733"
+    }
   },
   {
     "scientificName": "Plagiochila asplenioides",
@@ -294,7 +518,14 @@
     "familyName": "Plagiochilaceae",
     "rank": "species",
     "taxonId": 124394,
-    "obsCount": 127
+    "obsCount": 127,
+    "exampleObservation": {
+      "obsId": 324006938,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586335180/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/324006938"
+    }
   },
   {
     "scientificName": "Ptilidium ciliare",
@@ -303,7 +534,14 @@
     "familyName": "Ptilidiaceae",
     "rank": "species",
     "taxonId": 167557,
-    "obsCount": 124
+    "obsCount": 124,
+    "exampleObservation": {
+      "obsId": 322050226,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582522701/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/322050226"
+    }
   },
   {
     "scientificName": "Antitrichia curtipendula",
@@ -312,6 +550,13 @@
     "familyName": "Antitrichiaceae",
     "rank": "species",
     "taxonId": 126107,
-    "obsCount": 121
+    "obsCount": 121,
+    "exampleObservation": {
+      "obsId": 323614397,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585589292/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323614397"
+    }
   }
 ]

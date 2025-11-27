@@ -6,7 +6,14 @@
     "familyName": "Geotrupidae",
     "rank": "species",
     "taxonId": 125655,
-    "obsCount": 1647
+    "obsCount": 1647,
+    "exampleObservation": {
+      "obsId": 328232905,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594739098/large.jpg",
+      "observer": "elias_putzhammer",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328232905"
+    }
   },
   {
     "scientificName": "Aglais urticae",
@@ -15,7 +22,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 54468,
-    "obsCount": 1537
+    "obsCount": 1537,
+    "exampleObservation": {
+      "obsId": 328391249,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595049029/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328391249"
+    }
   },
   {
     "scientificName": "Argynnis paphia",
@@ -24,7 +38,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 123628,
-    "obsCount": 1465
+    "obsCount": 1465,
+    "exampleObservation": {
+      "obsId": 328324238,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921246/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324238"
+    }
   },
   {
     "scientificName": "Vanessa atalanta",
@@ -33,7 +54,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 49133,
-    "obsCount": 1392
+    "obsCount": 1392,
+    "exampleObservation": {
+      "obsId": 327581359,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593494952/large.jpg",
+      "observer": "tim-tas",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327581359"
+    }
   },
   {
     "scientificName": "Coccinella septempunctata",
@@ -42,7 +70,14 @@
     "familyName": "Coccinellidae",
     "rank": "species",
     "taxonId": 51702,
-    "obsCount": 1380
+    "obsCount": 1380,
+    "exampleObservation": {
+      "obsId": 328363366,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594998490/large.jpg",
+      "observer": "mjplagens",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328363366"
+    }
   },
   {
     "scientificName": "Noctua pronuba",
@@ -51,7 +86,14 @@
     "familyName": "Noctuidae",
     "rank": "species",
     "taxonId": 81687,
-    "obsCount": 1250
+    "obsCount": 1250,
+    "exampleObservation": {
+      "obsId": 327346378,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593030668/large.jpg",
+      "observer": "mazeson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327346378"
+    }
   },
   {
     "scientificName": "Palomena prasina",
@@ -60,7 +102,14 @@
     "familyName": "Pentatomidae",
     "rank": "species",
     "taxonId": 62060,
-    "obsCount": 1219
+    "obsCount": 1219,
+    "exampleObservation": {
+      "obsId": 328453737,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595182527/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328453737"
+    }
   },
   {
     "scientificName": "Gonepteryx rhamni",
@@ -69,7 +118,14 @@
     "familyName": "Pieridae",
     "rank": "species",
     "taxonId": 52771,
-    "obsCount": 1196
+    "obsCount": 1196,
+    "exampleObservation": {
+      "obsId": 328453939,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595183077/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328453939"
+    }
   },
   {
     "scientificName": "Aglais io",
@@ -78,7 +134,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 207977,
-    "obsCount": 1196
+    "obsCount": 1196,
+    "exampleObservation": {
+      "obsId": 328324223,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921195/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324223"
+    }
   },
   {
     "scientificName": "Bombus pascuorum",
@@ -87,7 +150,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 55637,
-    "obsCount": 1183
+    "obsCount": 1183,
+    "exampleObservation": {
+      "obsId": 328324210,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921141/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324210"
+    }
   },
   {
     "scientificName": "Apis mellifera",
@@ -96,7 +166,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 47219,
-    "obsCount": 1166
+    "obsCount": 1167,
+    "exampleObservation": {
+      "obsId": 326452567,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591246636/large.jpg",
+      "observer": "lisa_samuelson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326452567"
+    }
   },
   {
     "scientificName": "Harmonia axyridis",
@@ -105,7 +182,14 @@
     "familyName": "Coccinellidae",
     "rank": "species",
     "taxonId": 48484,
-    "obsCount": 1151
+    "obsCount": 1151,
+    "exampleObservation": {
+      "obsId": 328363362,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594996630/large.jpg",
+      "observer": "mjplagens",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328363362"
+    }
   },
   {
     "scientificName": "Aphantopus hyperantus",
@@ -114,7 +198,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 62426,
-    "obsCount": 1104
+    "obsCount": 1104,
+    "exampleObservation": {
+      "obsId": 328401379,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595074070/large.jpg",
+      "observer": "tt2019",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328401379"
+    }
   },
   {
     "scientificName": "Pentatoma rufipes",
@@ -123,7 +214,14 @@
     "familyName": "Pentatomidae",
     "rank": "species",
     "taxonId": 51275,
-    "obsCount": 1044
+    "obsCount": 1044,
+    "exampleObservation": {
+      "obsId": 323279243,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584923492/large.jpg",
+      "observer": "lette87",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323279243"
+    }
   },
   {
     "scientificName": "Pieris napi",
@@ -132,7 +230,14 @@
     "familyName": "Pieridae",
     "rank": "species",
     "taxonId": 54087,
-    "obsCount": 1035
+    "obsCount": 1035,
+    "exampleObservation": {
+      "obsId": 327301382,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592937868/large.jpg",
+      "observer": "martinbergman",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327301382"
+    }
   },
   {
     "scientificName": "Lycaena phlaeas",
@@ -141,7 +246,14 @@
     "familyName": "Lycaenidae",
     "rank": "species",
     "taxonId": 55655,
-    "obsCount": 1000
+    "obsCount": 1000,
+    "exampleObservation": {
+      "obsId": 328450920,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595176441/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328450920"
+    }
   },
   {
     "scientificName": "Trichius fasciatus",
@@ -150,7 +262,14 @@
     "familyName": "Scarabaeidae",
     "rank": "species",
     "taxonId": 55783,
-    "obsCount": 997
+    "obsCount": 997,
+    "exampleObservation": {
+      "obsId": 327574534,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593479749/large.jpg",
+      "observer": "martinbergman",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327574534"
+    }
   },
   {
     "scientificName": "Stictoleptura rubra",
@@ -159,7 +278,14 @@
     "familyName": "Cerambycidae",
     "rank": "species",
     "taxonId": 53258,
-    "obsCount": 941
+    "obsCount": 941,
+    "exampleObservation": {
+      "obsId": 327018736,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592376130/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327018736"
+    }
   },
   {
     "scientificName": "Macrothylacia rubi",
@@ -168,7 +294,14 @@
     "familyName": "Lasiocampidae",
     "rank": "species",
     "taxonId": 127506,
-    "obsCount": 938
+    "obsCount": 938,
+    "exampleObservation": {
+      "obsId": 328369974,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595012572/large.jpg",
+      "observer": "lizamast",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328369974"
+    }
   },
   {
     "scientificName": "Tettigonia viridissima",
@@ -177,7 +310,14 @@
     "familyName": "Tettigoniidae",
     "rank": "species",
     "taxonId": 133250,
-    "obsCount": 933
+    "obsCount": 933,
+    "exampleObservation": {
+      "obsId": 328339710,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594953216/large.jpg",
+      "observer": "lizamast",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328339710"
+    }
   },
   {
     "scientificName": "Cetonia aurata",
@@ -186,7 +326,14 @@
     "familyName": "Scarabaeidae",
     "rank": "species",
     "taxonId": 52402,
-    "obsCount": 904
+    "obsCount": 904,
+    "exampleObservation": {
+      "obsId": 328453603,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595182267/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328453603"
+    }
   },
   {
     "scientificName": "Polyommatus icarus",
@@ -195,7 +342,14 @@
     "familyName": "Lycaenidae",
     "rank": "species",
     "taxonId": 55641,
-    "obsCount": 869
+    "obsCount": 869,
+    "exampleObservation": {
+      "obsId": 325505038,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589346285/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325505038"
+    }
   },
   {
     "scientificName": "Melitaea athalia",
@@ -204,7 +358,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 132875,
-    "obsCount": 843
+    "obsCount": 843,
+    "exampleObservation": {
+      "obsId": 326500272,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591338139/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326500272"
+    }
   },
   {
     "scientificName": "Maniola jurtina",
@@ -213,7 +374,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 55653,
-    "obsCount": 774
+    "obsCount": 774,
+    "exampleObservation": {
+      "obsId": 322287440,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582980298/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322287440"
+    }
   },
   {
     "scientificName": "Cossus cossus",
@@ -222,7 +390,14 @@
     "familyName": "Cossidae",
     "rank": "species",
     "taxonId": 362611,
-    "obsCount": 738
+    "obsCount": 738,
+    "exampleObservation": {
+      "obsId": 327229339,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592794815/large.jpg",
+      "observer": "karin_coenobita",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327229339"
+    }
   },
   {
     "scientificName": "Ochlodes sylvanus",
@@ -231,7 +406,14 @@
     "familyName": "Hesperiidae",
     "rank": "species",
     "taxonId": 61781,
-    "obsCount": 724
+    "obsCount": 724,
+    "exampleObservation": {
+      "obsId": 327540759,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593414792/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327540759"
+    }
   },
   {
     "scientificName": "Pyrrhocoris apterus",
@@ -240,7 +422,14 @@
     "familyName": "Pyrrhocoridae",
     "rank": "species",
     "taxonId": 55610,
-    "obsCount": 720
+    "obsCount": 720,
+    "exampleObservation": {
+      "obsId": 328452014,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595178782/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328452014"
+    }
   },
   {
     "scientificName": "Xestia c-nigrum",
@@ -249,7 +438,14 @@
     "familyName": "Noctuidae",
     "rank": "species",
     "taxonId": 203342,
-    "obsCount": 711
+    "obsCount": 711,
+    "exampleObservation": {
+      "obsId": 326609365,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591560595/large.jpg",
+      "observer": "tobypilgrim",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326609365"
+    }
   },
   {
     "scientificName": "Graphosoma italicum",
@@ -258,7 +454,14 @@
     "familyName": "Pentatomidae",
     "rank": "species",
     "taxonId": 84804,
-    "obsCount": 698
+    "obsCount": 698,
+    "exampleObservation": {
+      "obsId": 328452659,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595180134/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328452659"
+    }
   },
   {
     "scientificName": "Episyrphus balteatus",
@@ -267,7 +470,14 @@
     "familyName": "Syrphidae",
     "rank": "species",
     "taxonId": 52482,
-    "obsCount": 694
+    "obsCount": 694,
+    "exampleObservation": {
+      "obsId": 327542084,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593418115/large.jpg",
+      "observer": "mikkolehikoinen",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327542084"
+    }
   },
   {
     "scientificName": "Polygonia c-album",
@@ -276,7 +486,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 56225,
-    "obsCount": 681
+    "obsCount": 681,
+    "exampleObservation": {
+      "obsId": 328458711,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595193632/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328458711"
+    }
   },
   {
     "scientificName": "Autographa gamma",
@@ -285,7 +502,14 @@
     "familyName": "Noctuidae",
     "rank": "species",
     "taxonId": 55651,
-    "obsCount": 672
+    "obsCount": 672,
+    "exampleObservation": {
+      "obsId": 326239593,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590820789/large.jpg",
+      "observer": "akixo",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326239593"
+    }
   },
   {
     "scientificName": "Bombus lapidarius",
@@ -294,7 +518,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 57619,
-    "obsCount": 667
+    "obsCount": 667,
+    "exampleObservation": {
+      "obsId": 326186295,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590719947/large.jpg",
+      "observer": "lisa_samuelson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326186295"
+    }
   },
   {
     "scientificName": "Nymphalis antiopa",
@@ -303,7 +534,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 56832,
-    "obsCount": 665
+    "obsCount": 665,
+    "exampleObservation": {
+      "obsId": 328457774,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595191416/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328457774"
+    }
   },
   {
     "scientificName": "Vespa crabro",
@@ -312,7 +550,14 @@
     "familyName": "Vespidae",
     "rank": "species",
     "taxonId": 54327,
-    "obsCount": 657
+    "obsCount": 657,
+    "exampleObservation": {
+      "obsId": 327325878,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592989034/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327325878"
+    }
   },
   {
     "scientificName": "Agelastica alni",
@@ -321,7 +566,14 @@
     "familyName": "Chrysomelidae",
     "rank": "species",
     "taxonId": 210933,
-    "obsCount": 637
+    "obsCount": 637,
+    "exampleObservation": {
+      "obsId": 321101966,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580343374/large.jpg",
+      "observer": "cristina_oc",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/321101966"
+    }
   },
   {
     "scientificName": "Sympetrum sanguineum",
@@ -330,7 +582,14 @@
     "familyName": "Libellulidae",
     "rank": "species",
     "taxonId": 113525,
-    "obsCount": 614
+    "obsCount": 614,
+    "exampleObservation": {
+      "obsId": 328324217,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921169/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324217"
+    }
   },
   {
     "scientificName": "Stenurella melanura",
@@ -339,7 +598,14 @@
     "familyName": "Cerambycidae",
     "rank": "species",
     "taxonId": 52436,
-    "obsCount": 604
+    "obsCount": 604,
+    "exampleObservation": {
+      "obsId": 327020670,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592377582/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327020670"
+    }
   },
   {
     "scientificName": "Plebejus argus",
@@ -348,7 +614,14 @@
     "familyName": "Lycaenidae",
     "rank": "species",
     "taxonId": 57484,
-    "obsCount": 601
+    "obsCount": 601,
+    "exampleObservation": {
+      "obsId": 324591600,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/587526069/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/324591600"
+    }
   },
   {
     "scientificName": "Luperina testacea",
@@ -357,7 +630,14 @@
     "familyName": "Noctuidae",
     "rank": "species",
     "taxonId": 429178,
-    "obsCount": 586
+    "obsCount": 586,
+    "exampleObservation": {
+      "obsId": 313790866,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/566697806/large.jpg",
+      "observer": "mazeson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/313790866"
+    }
   },
   {
     "scientificName": "Psyllobora vigintiduopunctata",
@@ -366,7 +646,14 @@
     "familyName": "Coccinellidae",
     "rank": "species",
     "taxonId": 51660,
-    "obsCount": 573
+    "obsCount": 573,
+    "exampleObservation": {
+      "obsId": 327301538,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/592939241/large.jpg",
+      "observer": "martinbergman",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327301538"
+    }
   },
   {
     "scientificName": "Bombus hypnorum",
@@ -375,7 +662,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 61803,
-    "obsCount": 568
+    "obsCount": 568,
+    "exampleObservation": {
+      "obsId": 326385729,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591111490/large.jpg",
+      "observer": "s1180",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326385729"
+    }
   },
   {
     "scientificName": "Callophrys rubi",
@@ -384,7 +678,14 @@
     "familyName": "Lycaenidae",
     "rank": "species",
     "taxonId": 60896,
-    "obsCount": 561
+    "obsCount": 561,
+    "exampleObservation": {
+      "obsId": 328451820,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595178429/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328451820"
+    }
   },
   {
     "scientificName": "Propylea quatuordecimpunctata",
@@ -393,7 +694,14 @@
     "familyName": "Coccinellidae",
     "rank": "species",
     "taxonId": 61532,
-    "obsCount": 558
+    "obsCount": 558,
+    "exampleObservation": {
+      "obsId": 328449450,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595173806/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328449450"
+    }
   },
   {
     "scientificName": "Yponomeuta evonymella",
@@ -402,7 +710,14 @@
     "familyName": "Yponomeutidae",
     "rank": "species",
     "taxonId": 324630,
-    "obsCount": 554
+    "obsCount": 554,
+    "exampleObservation": {
+      "obsId": 309092659,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/557705378/large.jpg",
+      "observer": "jonsense",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/309092659"
+    }
   },
   {
     "scientificName": "Sympetrum vulgatum",
@@ -411,7 +726,14 @@
     "familyName": "Libellulidae",
     "rank": "species",
     "taxonId": 132657,
-    "obsCount": 536
+    "obsCount": 536,
+    "exampleObservation": {
+      "obsId": 328324236,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921233/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324236"
+    }
   },
   {
     "scientificName": "Dolycoris baccarum",
@@ -420,7 +742,14 @@
     "familyName": "Pentatomidae",
     "rank": "species",
     "taxonId": 51666,
-    "obsCount": 525
+    "obsCount": 525,
+    "exampleObservation": {
+      "obsId": 322254645,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582851715/large.jpg",
+      "observer": "fenchelboy",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322254645"
+    }
   },
   {
     "scientificName": "Enallagma cyathigerum",
@@ -429,7 +758,14 @@
     "familyName": "Coenagrionidae",
     "rank": "species",
     "taxonId": 99901,
-    "obsCount": 524
+    "obsCount": 524,
+    "exampleObservation": {
+      "obsId": 322997516,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584389345/large.jpg",
+      "observer": "marcohai",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322997516"
+    }
   },
   {
     "scientificName": "Leptura quadrifasciata",
@@ -438,7 +774,14 @@
     "familyName": "Cerambycidae",
     "rank": "species",
     "taxonId": 325731,
-    "obsCount": 519
+    "obsCount": 519,
+    "exampleObservation": {
+      "obsId": 323450452,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585262596/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323450452"
+    }
   },
   {
     "scientificName": "Volucella pellucens",
@@ -447,7 +790,14 @@
     "familyName": "Syrphidae",
     "rank": "species",
     "taxonId": 52480,
-    "obsCount": 518
+    "obsCount": 518,
+    "exampleObservation": {
+      "obsId": 327574543,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593479776/large.jpg",
+      "observer": "martinbergman",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327574543"
+    }
   },
   {
     "scientificName": "Chorthippus brunneus",
@@ -456,7 +806,14 @@
     "familyName": "Acrididae",
     "rank": "species",
     "taxonId": 127308,
-    "obsCount": 514
+    "obsCount": 514,
+    "exampleObservation": {
+      "obsId": 326963540,
+      "photoUrl": "https://static.inaturalist.org/photos/592265833/large.jpg",
+      "observer": "scdjonas",
+      "licenseCode": null,
+      "obsUrl": "https://www.inaturalist.org/observations/326963540"
+    }
   },
   {
     "scientificName": "Rhagonycha fulva",
@@ -465,7 +822,14 @@
     "familyName": "Cantharidae",
     "rank": "species",
     "taxonId": 62456,
-    "obsCount": 508
+    "obsCount": 508,
+    "exampleObservation": {
+      "obsId": 327512159,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593360173/large.jpg",
+      "observer": "mikkolehikoinen",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327512159"
+    }
   },
   {
     "scientificName": "Helophilus pendulus",
@@ -474,7 +838,14 @@
     "familyName": "Syrphidae",
     "rank": "species",
     "taxonId": 52486,
-    "obsCount": 507
+    "obsCount": 507,
+    "exampleObservation": {
+      "obsId": 326470330,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591280718/large.jpg",
+      "observer": "resc",
+      "licenseCode": "cc-by-sa",
+      "obsUrl": "https://www.inaturalist.org/observations/326470330"
+    }
   },
   {
     "scientificName": "Orthetrum cancellatum",
@@ -483,7 +854,14 @@
     "familyName": "Libellulidae",
     "rank": "species",
     "taxonId": 62067,
-    "obsCount": 501
+    "obsCount": 501,
+    "exampleObservation": {
+      "obsId": 318406278,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/575434995/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/318406278"
+    }
   },
   {
     "scientificName": "Pholidoptera griseoaptera",
@@ -492,7 +870,14 @@
     "familyName": "Tettigoniidae",
     "rank": "species",
     "taxonId": 55359,
-    "obsCount": 490
+    "obsCount": 490,
+    "exampleObservation": {
+      "obsId": 327424457,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593091758/large.jpg",
+      "observer": "lars_lonsmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327424457"
+    }
   },
   {
     "scientificName": "Coreus marginatus",
@@ -501,7 +886,14 @@
     "familyName": "Coreidae",
     "rank": "species",
     "taxonId": 318545,
-    "obsCount": 487
+    "obsCount": 487,
+    "exampleObservation": {
+      "obsId": 328453437,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595181906/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328453437"
+    }
   },
   {
     "scientificName": "Bombus terrestris",
@@ -510,7 +902,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 57516,
-    "obsCount": 483
+    "obsCount": 483,
+    "exampleObservation": {
+      "obsId": 328227464,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594728668/large.jpg",
+      "observer": "lizamast",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328227464"
+    }
   },
   {
     "scientificName": "Mythimna pallens",
@@ -519,7 +918,14 @@
     "familyName": "Noctuidae",
     "rank": "species",
     "taxonId": 356188,
-    "obsCount": 483
+    "obsCount": 483,
+    "exampleObservation": {
+      "obsId": 321296572,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/581043107/large.jpg",
+      "observer": "mazeson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321296572"
+    }
   },
   {
     "scientificName": "Pieris brassicae",
@@ -528,7 +934,14 @@
     "familyName": "Pieridae",
     "rank": "species",
     "taxonId": 55401,
-    "obsCount": 482
+    "obsCount": 482,
+    "exampleObservation": {
+      "obsId": 326302216,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590947887/large.jpg",
+      "observer": "akixo",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326302216"
+    }
   },
   {
     "scientificName": "Argynnis aglaja",
@@ -537,7 +950,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 1456607,
-    "obsCount": 481
+    "obsCount": 481,
+    "exampleObservation": {
+      "obsId": 325505074,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589346542/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325505074"
+    }
   },
   {
     "scientificName": "Hipparchia semele",
@@ -546,7 +966,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 102800,
-    "obsCount": 468
+    "obsCount": 468,
+    "exampleObservation": {
+      "obsId": 326819528,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591979072/large.jpg",
+      "observer": "akixo",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326819528"
+    }
   },
   {
     "scientificName": "Libellula quadrimaculata",
@@ -555,7 +982,14 @@
     "familyName": "Libellulidae",
     "rank": "species",
     "taxonId": 57443,
-    "obsCount": 456
+    "obsCount": 456,
+    "exampleObservation": {
+      "obsId": 327910032,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594109925/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327910032"
+    }
   },
   {
     "scientificName": "Aromia moschata",
@@ -564,7 +998,14 @@
     "familyName": "Cerambycidae",
     "rank": "species",
     "taxonId": 129385,
-    "obsCount": 456
+    "obsCount": 456,
+    "exampleObservation": {
+      "obsId": 324998318,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/588352015/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/324998318"
+    }
   },
   {
     "scientificName": "Bombus pratorum",
@@ -573,7 +1014,14 @@
     "familyName": "Apidae",
     "rank": "species",
     "taxonId": 124910,
-    "obsCount": 454
+    "obsCount": 454,
+    "exampleObservation": {
+      "obsId": 318929535,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/576352325/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/318929535"
+    }
   },
   {
     "scientificName": "Coenonympha arcania",
@@ -582,7 +1030,14 @@
     "familyName": "Nymphalidae",
     "rank": "species",
     "taxonId": 125815,
-    "obsCount": 443
+    "obsCount": 443,
+    "exampleObservation": {
+      "obsId": 327645955,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593622725/large.jpg",
+      "observer": "martinbergman",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327645955"
+    }
   },
   {
     "scientificName": "Lycaena virgaureae",
@@ -591,7 +1046,14 @@
     "familyName": "Lycaenidae",
     "rank": "species",
     "taxonId": 147078,
-    "obsCount": 436
+    "obsCount": 436,
+    "exampleObservation": {
+      "obsId": 328324232,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594921227/large.jpg",
+      "observer": "finn_klessmann",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328324232"
+    }
   },
   {
     "scientificName": "Carabus nemoralis",
@@ -600,7 +1062,14 @@
     "familyName": "Carabidae",
     "rank": "species",
     "taxonId": 56552,
-    "obsCount": 426
+    "obsCount": 426,
+    "exampleObservation": {
+      "obsId": 326523884,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/591386903/large.jpg",
+      "observer": "fischerju",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/326523884"
+    }
   },
   {
     "scientificName": "Ematurga atomaria",
@@ -609,7 +1078,14 @@
     "familyName": "Geometridae",
     "rank": "species",
     "taxonId": 354801,
-    "obsCount": 422
+    "obsCount": 423,
+    "exampleObservation": {
+      "obsId": 328458312,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595192710/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328458312"
+    }
   },
   {
     "scientificName": "Cicindela campestris",
@@ -618,7 +1094,14 @@
     "familyName": "Cicindelidae",
     "rank": "species",
     "taxonId": 130143,
-    "obsCount": 419
+    "obsCount": 419,
+    "exampleObservation": {
+      "obsId": 328425209,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595124200/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328425209"
+    }
   },
   {
     "scientificName": "Pieris rapae",
@@ -627,6 +1110,13 @@
     "familyName": "Pieridae",
     "rank": "species",
     "taxonId": 55626,
-    "obsCount": 417
+    "obsCount": 417,
+    "exampleObservation": {
+      "obsId": 319397236,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/577354329/large.jpg",
+      "observer": "johnsmith777",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/319397236"
+    }
   }
 ]
