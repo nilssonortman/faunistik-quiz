@@ -11,23 +11,38 @@ const CONFIG = {
   QUESTIONS_COUNT: 10,
   OPTIONS_PER_QUESTION: 4,
 
-  // Vocab files (species-level), one per broad group
-  VOCAB_FILES: {
-    insects: "data/insects_vocab_sweden.json",
-    plants: "data/plants_vocab_sweden.json",
-    mosses: "data/mosses_vocab_sweden.json",
-    lichens: "data/lichens_vocab_sweden.json",
-    mammals: "data/mammals_vocab_sweden.json",
-    birds: "data/birds_vocab_sweden.json",
-    fungi: "data/fungi_vocab_sweden.json",
-    spiders: "data/spiders_vocab_sweden.json",
+  VOCAB_SETS: {
+    basic: {
+      insects: "data/basic/insects_vocab_sweden.json",
+      plants: "data/basic/plants_vocab_sweden.json",
+      mosses: "data/basic/mosses_vocab_sweden.json",
+      lichens: "data/basic/lichens_vocab_sweden.json",
+      mammals: "data/basic/mammals_vocab_sweden.json",
+      birds: "data/basic/birds_vocab_sweden.json",
+      fungi: "data/basic/fungi_vocab_sweden.json",
+      spiders: "data/basic/spiders_vocab_sweden.json",
+      herptiles: "data/basic/herptiles_vocab_sweden.json",
+    },
+    extended: {
+      insects: "data/extended/insects_vocab_sweden.json",
+      plants: "data/extended/plants_vocab_sweden.json",
+      mosses: "data/extended/mosses_vocab_sweden.json",
+      lichens: "data/extended/lichens_vocab_sweden.json",
+      mammals: "data/extended/mammals_vocab_sweden.json",
+      birds: "data/extended/birds_vocab_sweden.json",
+      fungi: "data/extended/fungi_vocab_sweden.json",
+      spiders: "data/extended/spiders_vocab_sweden.json",
+      herptiles: "data/extended/herptiles_vocab_sweden.json",
+    },
   },
 };
+
 
 // ---------------- STATE -----------------------------------------------
 let vocabByGroup = {};        // { groupKey: [speciesEntry, ...] }
 let genusVocabByGroup = {};  // { groupKey: [ { genusName, swedishName, representative }, ... ] }
 let familyVocabByGroup = {}; // { groupKey: [ { familyName, swedishName, representative }, ... ] }
+let currentVocabSet = "basic"; // "basic" | "extended"
 
 let quizQuestions = [];      // [{ correct, options }]
 let currentIndex = 0;
@@ -51,8 +66,15 @@ const answersEl = document.getElementById("answers");
 const attributionEl = document.getElementById("attribution");
 const nextBtn = document.getElementById("next-btn");
 const levelSelectEl = document.getElementById("level-select");
+const vocabSetSelectEl = document.getElementById("vocab-set-select");
 
 // ---------------- HELPERS ---------------------------------------------
+
+async function loadAllVocabAndDerived() {
+  await loadVocab();
+  buildGenusVocabFromSpecies();
+  buildFamilyVocabFromSpecies();
+}
 
 function shuffleArray(array) {
   const arr = array.slice();
@@ -192,7 +214,8 @@ function getFamilyDistractorPool(familyList, correctFamily, needed, scope) {
 // ---------------- LOAD VOCAB ------------------------------------------
 
 async function loadVocab() {
-  const entries = Object.entries(CONFIG.VOCAB_FILES);
+  const vocabConfig = CONFIG.VOCAB_SETS[currentVocabSet];
+  const entries = Object.entries(vocabConfig);
   const result = {};
 
   for (const [groupKey, path] of entries) {
@@ -208,26 +231,30 @@ async function loadVocab() {
       const data = await res.json();
       const list = Array.isArray(data) ? data : [];
 
-      // Keep only entries that actually have an exampleObservation with photoUrl
       const filtered = list.filter(
         (e) =>
           e.exampleObservation &&
           e.exampleObservation.photoUrl &&
           e.exampleObservation.obsId
       );
+
       result[groupKey] = filtered;
       console.log(
-        `Loaded ${list.length} species for group "${groupKey}", ` +
+        `Loaded ${list.length} species for group "${groupKey}" from set "${currentVocabSet}", ` +
           `${filtered.length} with exampleObservation`
       );
     } catch (err) {
-      console.warn(`Error loading vocab for ${groupKey} from ${path}`, err);
+      console.warn(
+        `Error loading vocab for ${groupKey} from ${path}`,
+        err
+      );
       result[groupKey] = [];
     }
   }
 
   vocabByGroup = result;
 }
+
 
 // Build genus-level derived vocab from species vocab
 function buildGenusVocabFromSpecies() {
@@ -741,6 +768,15 @@ async function initQuiz() {
     });
     }
 
+    if (vocabSetSelectEl) {
+    vocabSetSelectEl.addEventListener("change", async () => {
+        currentVocabSet = vocabSetSelectEl.value || "basic";
+        statusEl.textContent = "Laddar ny vokabulär…";
+        await loadAllVocabAndDerived();
+        await rebuildQuizForCurrentLevel();
+    });
+    }
+
     await rebuildQuizForCurrentLevel();
   } catch (err) {
     console.error(err);
@@ -748,6 +784,7 @@ async function initQuiz() {
       "Fel vid laddning av data. Se konsolen för detaljer.";
   }
 }
+
 
 nextBtn.addEventListener("click", () => {
   imageWrapperEl && imageWrapperEl.classList.add("loading-image");
