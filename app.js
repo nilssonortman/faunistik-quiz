@@ -139,22 +139,23 @@ function buildFamilyVocabFromSpecies() {
   const result = {};
 
   for (const [groupKey, speciesList] of Object.entries(vocabByGroup)) {
-    const familyMap = new Map(); // familyName -> { familyName, swedishName, representative }
+    const familyMap = new Map(); // familyName -> { ... }
 
     for (const sp of speciesList) {
       const fam = sp.familyName;
-      if (!fam) continue; // skip species without family info
+      if (!fam) continue;
 
-      // Prefer Swedish family name from vocab (familySwedishName),
-      // otherwise fall back to the species Swedish name as a hint.
+      const hasFamilySwe = !!sp.familySwedishName;
+
       const familySwe =
         sp.familySwedishName || sp.swedishName || null;
 
       if (!familyMap.has(fam)) {
         familyMap.set(fam, {
-          familyName: fam,          // Latin family name (e.g. Geotrupidae)
-          swedishName: familySwe,   // Swedish family name (e.g. tordyvlar)
-          representative: sp,       // species entry for photos
+          familyName: fam,                  // Latin
+          swedishName: familySwe,           // Either Swedish family or species name
+          representative: sp,
+          useExampleSpeciesName: !hasFamilySwe, // <---- NEW FLAG
         });
       }
     }
@@ -166,6 +167,7 @@ function buildFamilyVocabFromSpecies() {
 
   familyVocabByGroup = result;
 }
+
 
 
 // ---------------- BUILD QUIZ: SPECIES LEVEL ---------------------------
@@ -396,19 +398,31 @@ async function buildFamilyQuizQuestionsFromVocab() {
     if (pool.length < neededDistractors) continue;
 
     const distractorFamilies = pickRandomSubset(pool, neededDistractors);
+    
+const sweName = correctFamily.swedishName;
+const formattedSwe =
+  correctFamily.useExampleSpeciesName && sweName
+    ? `t.ex. ${sweName}`
+    : sweName;
 
-    const options = [
-      {
-        key: correctFamily.familyName, // family: key = familyName
-        labelSci: correctFamily.familyName,
-        labelSwe: correctFamily.swedishName,
-      },
-      ...distractorFamilies.map((f) => ({
-        key: f.familyName,
-        labelSci: f.familyName,
-        labelSwe: f.swedishName,
-      })),
-    ];
+const options = [
+  {
+    key: correctFamily.familyName,
+    labelSci: correctFamily.familyName,
+    labelSwe: formattedSwe,
+  },
+  ...distractorFamilies.map((f) => {
+    const dswe = f.swedishName;
+    const formatted =
+      f.useExampleSpeciesName && dswe ? `t.ex. ${dswe}` : dswe;
+    return {
+      key: f.familyName,
+      labelSci: f.familyName,
+      labelSwe: formatted,
+    };
+  })
+];
+
 
     questions.push({
       correct: {
