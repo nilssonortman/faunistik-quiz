@@ -1006,7 +1006,7 @@ async function initQuiz() {
       dataSourceSelectEl.addEventListener("change", async () => {
         dataSource = dataSourceSelectEl.value || "inat";
 
-        if (dataSource === "course") {
+        if (dataSource === "course") {  
           // Kursläget: tvinga art-nivå
           if (currentLevel !== "species") {
             currentLevel = "species";
