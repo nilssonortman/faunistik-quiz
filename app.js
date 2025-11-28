@@ -43,16 +43,14 @@ let vocabByGroup = {};        // { groupKey: [speciesEntry, ...] }
 let genusVocabByGroup = {};  // { groupKey: [ { genusName, swedishName, representative }, ... ] }
 let familyVocabByGroup = {}; // { groupKey: [ { familyName, swedishName, representative }, ... ] }
 let currentVocabSet = "basic"; // "basic" | "extended"
-
 let quizQuestions = [];      // [{ correct, options }]
 let currentIndex = 0;
 let score = 0;
 let currentLevel = "species"; // "species" | "genus" | "family"
 let distractorScope = "group"; // "group" | "order" | "family"
+let dataSource = "inat"; // "inat" | "course"
+let courseVocab = [];    // species from course project
 
-const distractorScopeSelectEl = document.getElementById(
-  "distractor-scope-select"
-);
 
 // ---------------- DOM ELEMENTS ----------------------------------------
 const statusEl = document.getElementById("status");
@@ -67,14 +65,24 @@ const attributionEl = document.getElementById("attribution");
 const nextBtn = document.getElementById("next-btn");
 const levelSelectEl = document.getElementById("level-select");
 const vocabSetSelectEl = document.getElementById("vocab-set-select");
+const dataSourceSelectEl = document.getElementById("data-source-select");
+const distractorScopeSelectEl = document.getElementById(
+  "distractor-scope-select"
+);
 
 // ---------------- HELPERS ---------------------------------------------
 
 async function loadAllVocabAndDerived() {
-  await loadVocab();
-  buildGenusVocabFromSpecies();
-  buildFamilyVocabFromSpecies();
+  await loadVocab();               // iNat basic/extended → vocabByGroup
+  buildGenusVocabFromSpecies();    // bygger genusVocabByGroup från vocabByGroup
+  buildFamilyVocabFromSpecies();   // bygger familyVocabByGroup
 }
+
+async function loadAllData() {
+  await loadAllVocabAndDerived();
+  await loadCourseVocab();         // fyller courseVocab från data/course_2025/...
+}
+
 
 function shuffleArray(array) {
   const arr = array.slice();
@@ -99,6 +107,42 @@ function formatLabel(scientificName, swedishName) {
 function italicizeSci(name) {
   if (!name) return "";
   return `<i>${name}</i>`;
+}
+
+function determineGroupKeyForSpecies(entry) {
+  const cls = (entry.classScientificName || "").toLowerCase();
+  const ord = (entry.orderScientificName || "").toLowerCase();
+
+  // Insects, birds, mammals, herptiles
+  if (cls === "insecta") return "insects";
+  if (cls === "aves") return "birds";
+  if (cls === "mammalia") return "mammals";
+  if (cls === "amphibia" || cls === "reptilia") return "herptiles";
+
+  // Spiders
+  if (ord === "araneae" || cls === "arachnida") return "spiders";
+
+  // Lichens (main lichen classes)
+  if (cls === "lecanoromycetes" || cls === "eurotiomycetes") return "lichens";
+
+  // Mosses
+  if (cls === "bryopsida" || cls === "marchantiopsida") return "mosses";
+
+  // Crude plant detection: many plant classes end with -opsida
+  if (cls.endsWith("opsida")) return "plants";
+
+  // Crude fungi detection: many fungi classes end with -mycetes
+  if (cls.endsWith("mycetes")) return "fungi";
+
+  return null; // unknown group
+}
+
+function getAllInatSpeciesList() {
+  const all = [];
+  for (const list of Object.values(vocabByGroup)) {
+    all.push(...list);
+  }
+  return all;
 }
 
 function getSpeciesDistractorPool(list, correctEntry, needed, scope) {
@@ -256,6 +300,40 @@ async function loadVocab() {
 }
 
 
+async function loadCourseVocab() {
+  try {
+    const res = await fetch("data/course_2025/course_2025_vocab.json");
+    if (!res.ok) {
+      console.warn(
+        "Failed to load course vocab:",
+        res.status,
+        res.statusText
+      );
+      courseVocab = [];
+      return;
+    }
+    const data = await res.json();
+    const list = Array.isArray(data) ? data : [];
+
+    const filtered = list.filter(
+      (e) =>
+        e.exampleObservation &&
+        e.exampleObservation.photoUrl &&
+        e.exampleObservation.obsId
+    );
+
+    courseVocab = filtered;
+    console.log(
+      `Loaded ${filtered.length} species from course project vocab`
+    );
+  } catch (err) {
+    console.error("Error loading course vocab:", err);
+    courseVocab = [];
+  }
+}
+
+
+
 // Build genus-level derived vocab from species vocab
 function buildGenusVocabFromSpecies() {
   const result = {};
@@ -319,7 +397,7 @@ function buildFamilyVocabFromSpecies() {
 
 
 // ---------------- BUILD QUIZ: SPECIES LEVEL ---------------------------
-
+// iNat
 async function buildSpeciesQuizQuestionsFromVocab() {
   const neededDistractors = CONFIG.OPTIONS_PER_QUESTION - 1;
   const questions = [];
@@ -407,6 +485,103 @@ async function buildSpeciesQuizQuestionsFromVocab() {
   );
   return questions;
 }
+//Course project
+async function buildSpeciesQuizQuestionsFromCourse() {
+  const neededDistractors = CONFIG.OPTIONS_PER_QUESTION - 1;
+  const questions = [];
+
+  const usableCourseSpecies = courseVocab.filter(
+    (e) =>
+      e.exampleObservation &&
+      e.exampleObservation.photoUrl &&
+      e.exampleObservation.obsId
+  );
+
+  if (!usableCourseSpecies.length) {
+    console.warn("No usable species in courseVocab.");
+    return [];
+  }
+
+  const maxQuestions = Math.min(
+    CONFIG.QUESTIONS_COUNT,
+    usableCourseSpecies.length
+  );
+
+  // Make a shallow copy and shuffle
+  const shuffled = [...usableCourseSpecies];
+  shuffled.sort(() => Math.random() - 0.5);
+
+  for (let i = 0; i < maxQuestions; i++) {
+    const correctEntry = shuffled[i];
+
+    // Determine group to pick distractors from in iNat vocab
+    let groupKey = determineGroupKeyForSpecies(correctEntry);
+    let inatList = [];
+
+    if (groupKey && vocabByGroup[groupKey]?.length) {
+      inatList = vocabByGroup[groupKey];
+    } else {
+      // fallback: all iNat species
+      inatList = getAllInatSpeciesList();
+      groupKey = "course"; // generic tag
+    }
+
+    const pool = getSpeciesDistractorPool(
+      inatList,
+      correctEntry,
+      neededDistractors,
+      distractorScope
+    );
+
+    if (pool.length < neededDistractors) {
+      console.warn(
+        "Not enough distractors for course species:",
+        correctEntry.scientificName
+      );
+      continue;
+    }
+
+    const distractorEntries = pickRandomSubset(pool, neededDistractors);
+
+    // Build options (= correct + distractors) with taxonId keys
+    const options = [
+      {
+        key: String(correctEntry.taxonId),
+        labelSci: correctEntry.scientificName,
+        labelSwe: correctEntry.swedishName || null,
+      },
+      ...distractorEntries.map((e) => ({
+        key: String(e.taxonId),
+        labelSci: e.scientificName,
+        labelSwe: e.swedishName || null,
+      })),
+    ];
+
+    const ex = correctEntry.exampleObservation;
+
+    questions.push({
+      correct: {
+        answerKey: String(correctEntry.taxonId),
+        labelSci: correctEntry.scientificName,
+        labelSwe: correctEntry.swedishName || null,
+
+        obsId: ex.obsId,
+        photoUrl: ex.photoUrl,
+        observer: ex.observer || "okänd",
+        licenseCode: ex.licenseCode || null,
+        obsUrl: ex.obsUrl || "#",
+        groupKey,
+      },
+      options: shuffleArray(options),
+    });
+  }
+
+  console.log(
+    `Course species quiz: built ${questions.length} questions (from ${usableCourseSpecies.length} course taxa)`
+  );
+  return questions;
+}
+
 
 // ---------------- BUILD QUIZ: GENUS LEVEL -----------------------------
 
@@ -611,30 +786,52 @@ const options = [
 // ---------------- REBUILD QUIZ FOR CURRENT LEVEL ----------------------
 
 async function rebuildQuizForCurrentLevel() {
-  statusEl.textContent = "Bygger frågor från vokabulären…";
-  quizQuestions = [];
-
-  if (currentLevel === "species") {
-    quizQuestions = await buildSpeciesQuizQuestionsFromVocab();
-  } else if (currentLevel === "genus") {
-    quizQuestions = await buildGenusQuizQuestionsFromVocab();
-  } else if (currentLevel === "family") {
-    quizQuestions = await buildFamilyQuizQuestionsFromVocab();
-  }
-
   currentIndex = 0;
   score = 0;
 
-  if (!quizQuestions.length) {
+  let newQuestions = [];
+
+  if (currentLevel === "species") {
+    if (dataSource === "course") {
+      statusEl.textContent =
+        "Bygger frågor (hämtar observationer från kursprojektet)…";
+      newQuestions = await buildSpeciesQuizQuestionsFromCourse();
+    } else {
+      statusEl.textContent =
+        "Bygger frågor (hämtar bilder från iNaturalist)…";
+      newQuestions = await buildSpeciesQuizQuestionsFromVocab();
+    }
+  } else if (currentLevel === "genus") {
+    // For now, genus-level quiz always uses iNat vocab
+    dataSource = "inat";
+    if (dataSourceSelectEl) dataSourceSelectEl.value = "inat";
     statusEl.textContent =
-      "Kunde inte skapa några frågor. Testa en annan nivå eller kontrollera JSON-filerna.";
+      "Bygger frågor (släkte-nivå, iNaturalist-vokabulär)…";
+    newQuestions = await buildGenusQuizQuestionsFromVocab();
+  } else {
+    // currentLevel === "family"
+    dataSource = "inat";
+    if (dataSourceSelectEl) dataSourceSelectEl.value = "inat";
+    statusEl.textContent =
+      "Bygger frågor (familj-nivå, iNaturalist-vokabulär)…";
+    newQuestions = await buildFamilyQuizQuestionsFromVocab();
+  }
+
+  // Store questions in the state that renderQuestion() actually uses
+  quizQuestions = newQuestions;
+
+  if (!quizQuestions.length) {
+    statusEl.textContent = "Kunde inte skapa några frågor.";
     questionContainerEl.classList.add("hidden");
-    nextBtn.classList.add("hidden");
     return;
   }
 
+  statusEl.textContent = "";
+  questionContainerEl.classList.remove("hidden");
   renderQuestion();
 }
+
+
 
 // ---------------- RENDERING -------------------------------------------
 
@@ -745,38 +942,87 @@ function renderFinished() {
 }
 
 // ---------------- INIT & EVENTS ---------------------------------------
-
 async function initQuiz() {
   statusEl.textContent = "Laddar vokabulär från JSON-filer…";
 
   try {
-    await loadVocab();
-    buildGenusVocabFromSpecies();
-    buildFamilyVocabFromSpecies();
+    // 1) Ladda både iNaturalist-vokabulär (basic/extended) + kursvokabulär
+    //    Kräver att du har:
+    //    - loadAllVocabAndDerived()  (laddar iNat + bygger genus/familj)
+    //    - loadCourseVocab()         (laddar data/course_2025/...)
+    //    - loadAllData() som kallar båda
+    await loadAllData();
 
+    // 2) Synka kontrollernas startvärden + koppla events
+
+    // Nivå: art/släkte/familj
     if (levelSelectEl) {
       levelSelectEl.value = currentLevel;
+      levelSelectEl.addEventListener("change", async () => {
+        currentLevel = levelSelectEl.value || "species";
+
+        // Kursläget är bara art-nivå i nuläget
+        if (dataSource === "course" && currentLevel !== "species") {
+          currentLevel = "species";
+          levelSelectEl.value = "species";
+        }
+
+        await rebuildQuizForCurrentLevel();
+      });
     }
 
+    // Felalternativens släktskap (group / order / family)
     if (distractorScopeSelectEl) {
       distractorScopeSelectEl.value = distractorScope;
-    }
-    if (distractorScopeSelectEl) {
       distractorScopeSelectEl.addEventListener("change", async () => {
-      distractorScope = distractorScopeSelectEl.value || "group";
-      await rebuildQuizForCurrentLevel();
-    });
+        distractorScope = distractorScopeSelectEl.value || "group";
+        await rebuildQuizForCurrentLevel();
+      });
     }
 
+    // Grundlista / stor lista (påverkar bara iNat-delen)
     if (vocabSetSelectEl) {
-    vocabSetSelectEl.addEventListener("change", async () => {
+      vocabSetSelectEl.value = currentVocabSet;
+      vocabSetSelectEl.addEventListener("change", async () => {
         currentVocabSet = vocabSetSelectEl.value || "basic";
         statusEl.textContent = "Laddar ny vokabulär…";
+
+        // Ladda om iNat-vokabulären (basic/extended) och bygg genus/familj igen
         await loadAllVocabAndDerived();
+
+        // Om vi står i kursläge, låt kursvokabulären vara,
+        // men se till att den är laddad om någon gång försvunnit.
+        if (dataSource === "course" && !courseVocab.length) {
+          await loadCourseVocab();
+        }
+
         await rebuildQuizForCurrentLevel();
-    });
+      });
     }
 
+    // Källa: iNaturalist vs Kursprojekt
+    if (dataSourceSelectEl) {
+      dataSourceSelectEl.value = dataSource;
+      dataSourceSelectEl.addEventListener("change", async () => {
+        dataSource = dataSourceSelectEl.value || "inat";
+
+        if (dataSource === "course") {
+          // Kursläget: tvinga art-nivå
+          if (currentLevel !== "species") {
+            currentLevel = "species";
+            if (levelSelectEl) levelSelectEl.value = "species";
+          }
+          // Se till att kursvokabulären finns
+          if (!courseVocab.length) {
+            await loadCourseVocab();
+          }
+        }
+
+        await rebuildQuizForCurrentLevel();
+      });
+    }
+
+    // 3) Bygg första uppsättningen frågor
     await rebuildQuizForCurrentLevel();
   } catch (err) {
     console.error(err);
@@ -785,19 +1031,12 @@ async function initQuiz() {
   }
 }
 
-
 nextBtn.addEventListener("click", () => {
   imageWrapperEl && imageWrapperEl.classList.add("loading-image");
   currentIndex += 1;
   renderQuestion();
 });
 
-if (levelSelectEl) {
-  levelSelectEl.addEventListener("change", async () => {
-    currentLevel = levelSelectEl.value || "species";
-    await rebuildQuizForCurrentLevel();
-  });
-}
 
 // Start the quiz
 initQuiz();
