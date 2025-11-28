@@ -190,11 +190,11 @@
     "taxonId": 136604,
     "obsCount": 303,
     "exampleObservation": {
-      "obsId": 328076596,
-      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425346/large.jpg",
-      "observer": "pcartier",
-      "licenseCode": "cc0",
-      "obsUrl": "https://www.inaturalist.org/observations/328076596"
+      "obsId": 328372175,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595010262/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328372175"
     }
   },
   {
@@ -767,6 +767,116 @@
       "observer": "magnus_stenmark",
       "licenseCode": "cc-by-nc",
       "obsUrl": "https://www.inaturalist.org/observations/323614397"
+    }
+  },
+  {
+    "scientificName": "Alleniella complanata",
+    "swedishName": "platt fjädermossa",
+    "genusName": "Alleniella",
+    "familyName": "Neckeraceae",
+    "familyScientificName": "Neckeraceae",
+    "familySwedishName": null,
+    "orderScientificName": "Hypnales",
+    "orderSwedishName": null,
+    "classScientificName": "Bryopsida",
+    "classSwedishName": "egentliga bladmossor",
+    "rank": "species",
+    "taxonId": 1121989,
+    "obsCount": 121,
+    "exampleObservation": {
+      "obsId": 321371731,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/581196788/large.jpg",
+      "observer": "haidia",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321371731"
+    }
+  },
+  {
+    "scientificName": "Rhodobryum roseum",
+    "swedishName": "rosmossa",
+    "genusName": "Rhodobryum",
+    "familyName": "Bryaceae",
+    "familyScientificName": "Bryaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Bryales",
+    "orderSwedishName": null,
+    "classScientificName": "Bryopsida",
+    "classSwedishName": "egentliga bladmossor",
+    "rank": "species",
+    "taxonId": 167809,
+    "obsCount": 119,
+    "exampleObservation": {
+      "obsId": 326191971,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590727671/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/326191971"
+    }
+  },
+  {
+    "scientificName": "Sphagnum girgensohnii",
+    "swedishName": "granvitmossa",
+    "genusName": "Sphagnum",
+    "familyName": "Sphagnaceae",
+    "familyScientificName": "Sphagnaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Sphagnales",
+    "orderSwedishName": null,
+    "classScientificName": "Sphagnopsida",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 129775,
+    "obsCount": 116,
+    "exampleObservation": {
+      "obsId": 323696589,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585722181/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323696589"
+    }
+  },
+  {
+    "scientificName": "Aulacomnium palustre",
+    "swedishName": "räffelmossa",
+    "genusName": "Aulacomnium",
+    "familyName": "Aulacomniaceae",
+    "familyScientificName": "Aulacomniaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Aulacomniales",
+    "orderSwedishName": null,
+    "classScientificName": "Bryopsida",
+    "classSwedishName": "egentliga bladmossor",
+    "rank": "species",
+    "taxonId": 154189,
+    "obsCount": 113,
+    "exampleObservation": {
+      "obsId": 328076532,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594425034/large.jpg",
+      "observer": "pcartier",
+      "licenseCode": "cc0",
+      "obsUrl": "https://www.inaturalist.org/observations/328076532"
+    }
+  },
+  {
+    "scientificName": "Dicranum polysetum",
+    "swedishName": "Vågig kvastmossa",
+    "genusName": "Dicranum",
+    "familyName": "Dicranaceae",
+    "familyScientificName": "Dicranaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Dicranales",
+    "orderSwedishName": null,
+    "classScientificName": "Bryopsida",
+    "classSwedishName": "egentliga bladmossor",
+    "rank": "species",
+    "taxonId": 161868,
+    "obsCount": 113,
+    "exampleObservation": {
+      "obsId": 320869762,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580210383/large.jpg",
+      "observer": "martina68910",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/320869762"
     }
   }
 ]

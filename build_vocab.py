@@ -2,40 +2,26 @@
 """
 Build species-level vocabularies for faunistics quiz from iNaturalist.
 
-For each configured group (insects, plants, mosses, etc.), this script:
-  1) Calls /observations/species_counts to get the most observed species in Sweden
-  2) Deduplicates species across multiple higher taxa if needed
-  3) Fetches full taxon info (to get class, order, family, etc.) via /v1/taxa
-  4) Fetches ONE example observation with a usable photo per species
-  5) Writes a JSON file with:
+Usage:
+  python build_vocab.py --mode basic
+  python build_vocab.py --mode extended
 
-     [
-       {
-         "scientificName": "Bombus terrestris",
-         "swedishName": "Mörk jordhumla",
-         "genusName": "Bombus",
-         "familyName": "Apidae",              # Latin family name (backwards-compatible)
-         "familyScientificName": "Apidae",
-         "familySwedishName": "bin",
-         "orderScientificName": "Hymenoptera",
-         "orderSwedishName": null,
-         "classScientificName": "Insecta",
-         "classSwedishName": null,
-         "rank": "species",
-         "taxonId": 52856,
-         "obsCount": 1234,
-         "exampleObservation": {
-           "obsId": 1234567,
-           "photoUrl": ".../large.jpg",
-           "observer": "some_user",
-           "licenseCode": "cc-by",
-           "obsUrl": "https://www.inaturalist.org/observations/1234567"
-         }
-       },
-       ...
-     ]
+This will write JSON files to:
+  data/basic/*_vocab_sweden.json
+  data/extended/*_vocab_sweden.json
+
+Each entry includes:
+  - scientificName, swedishName
+  - genusName
+  - familyName (Latin, for backwards compatibility)
+  - familyScientificName, familySwedishName
+  - orderScientificName, orderSwedishName
+  - classScientificName, classSwedishName
+  - taxonId, obsCount
+  - exampleObservation (obsId, photoUrl, observer, licenseCode, obsUrl)
 """
 
+import argparse
 import json
 import os
 import time
@@ -61,61 +47,71 @@ MAX_SPECIES_PAGES = 3  # adjust as needed
 MAX_RETRIES_PER_REQUEST = 5  # how many times to retry a single page on 429
 INITIAL_BACKOFF_SECONDS = 1.0  # starting wait after first 429
 
-# Where to write the JSON files (relative to this script)
-OUTPUT_DIR = "data"
+# Where to write the JSON files (base folder)
+BASE_OUTPUT_DIR = "data"
 
 # Licenses we consider "safe" for student-facing usage
 CONFIG_ALLOWED_LICENSES = ["cc0", "cc-by", "cc-by-nc"]
 
-# Taxa configuration: tweak as you like
-TAXA_CONFIG = [
-    # -------------------------
+# -------------------------------------------------------------------
+# BASIC vs EXTENDED taxa configs
+# -------------------------------------------------------------------
+# You can tune these numbers later; this is a reasonable starting point.
+
+BASIC_TAXA_CONFIG = [
     # INSECTS
-    # -------------------------
     {
         "label": "insects",
         "taxon_ids": [47158],  # Insecta
-        "top_n": 100,   #basic: 100, extended: 400
+        "top_n": 100,
     },
-    # -------------------------
     # PLANTS (broad)
-    # -------------------------
     {
         "label": "plants",
-        "taxon_ids": [211194],  # Trachaeophyta
-        "top_n": 100,   #basic: 100, extended: 400
+        "taxon_ids": [47126],  # Plantae
+        "top_n": 100,
     },
-    # -------------------------
     # MOSSES = Bryophyta + Marchantiophyta
-    # -------------------------
     {
         "label": "mosses",
-        "taxon_ids": [311249, 64615],  # Marchantiophyta (liverworts)+ Bryophyta (mosses)
-        "top_n": 40,    #basic: 35, extended: 100
+        "taxon_ids": [
+            311249,  # Bryophyta (mosses)
+            64615,   # Marchantiophyta (liverworts)
+        ],
+        "top_n": 40,
     },
-    # -------------------------
-    # LICHENS (Lecanoromycetes + Eurotiomycetes = main lichen groups)
-    # -------------------------
+    # LICHENS (Lecanoromycetes + Eurotiomycetes)
     {
         "label": "lichens",
-        "taxon_ids": [54743, 117868, 121092],   # combined into ONE list
-        "top_n": 40,    #basic: 30, extended: 100
+        "taxon_ids": [
+            54743,   # Lecanoromycetes
+            117868,  # Eurotiomycetes
+        ],
+        "top_n": 40,
     },
-   # -------------------------
     # MAMMALS
-    # -------------------------
     {
         "label": "mammals",
         "taxon_ids": [40151],
-        "top_n": 25,    #basic: 25, extended: 500
+        "top_n": 25,
     },
-    # -------------------------
     # BIRDS
-    # -------------------------
     {
         "label": "birds",
         "taxon_ids": [3],
-        "top_n": 50,    #basic: 50, extended: 500
+        "top_n": 50,
+    },
+    # FUNGI
+    {
+        "label": "fungi",
+        "taxon_ids": [47170],  # Fungi kingdom
+        "top_n": 50,
+    },
+    # SPIDERS
+    {
+        "label": "spiders",
+        "taxon_ids": [47118],  # Araneae
+        "top_n": 35,
     },
     # -------------------------
     # REPTILES AND AMPHIBIANS
@@ -123,25 +119,80 @@ TAXA_CONFIG = [
     {
         "label": "herptiles",
         "taxon_ids": [26036, 20978],   #reptilia + amphibia
-        "top_n": 19,    #basic: 19, extended: 19
+        "top_n": 15, 
+    },   
+]
+
+EXTENDED_TAXA_CONFIG = [
+    # INSECTS
+    {
+        "label": "insects",
+        "taxon_ids": [47158],  # Insecta
+        "top_n": 400,
     },
-    # -------------------------
-    # FUNGI + LICHENS
-    # -------------------------
+    # PLANTS (broad)
+    {
+        "label": "plants",
+        "taxon_ids": [47126],  # Plantae
+        "top_n": 400,
+    },
+    # MOSSES = Bryophyta + Marchantiophyta
+    {
+        "label": "mosses",
+        "taxon_ids": [
+            311249,  # Bryophyta
+            64615,   # Marchantiophyta
+        ],
+        "top_n": 100,
+    },
+    # LICHENS (Lecanoromycetes + Eurotiomycetes)
+    {
+        "label": "lichens",
+        "taxon_ids": [
+            54743,   # Lecanoromycetes
+            117868,  # Eurotiomycetes
+        ],
+        "top_n": 100,
+    },
+    # MAMMALS
+    {
+        "label": "mammals",
+        "taxon_ids": [40151],
+        "top_n": 45,
+    },
+    # BIRDS
+    {
+        "label": "birds",
+        "taxon_ids": [3],
+        "top_n": 130,
+    },
+    # FUNGI
     {
         "label": "fungi",
         "taxon_ids": [47170],  # Fungi kingdom
-        "top_n": 50,    #basic: 50, extended: 500
+        "top_n": 180,
     },
-    # -------------------------
     # SPIDERS
-    # -------------------------
     {
         "label": "spiders",
         "taxon_ids": [47118],  # Araneae
-        "top_n": 35,    #basic: 35, extended: 500
+        "top_n": 90,
     },
+    # -------------------------
+    # REPTILES AND AMPHIBIANS
+    # -------------------------
+    {
+        "label": "herptiles",
+        "taxon_ids": [26036, 20978],   #reptilia + amphibia
+        "top_n": 19,    
+    },    
 ]
+
+
+def get_taxa_config(mode: str):
+    if mode == "extended":
+        return EXTENDED_TAXA_CONFIG
+    return BASIC_TAXA_CONFIG
 
 
 # -------------------------------------------------------------------
@@ -490,13 +541,33 @@ def build_group_vocab_multi_taxa_species(label: str, taxon_ids: List[int], top_n
 
 
 # -------------------------------------------------------------------
-# Main
+# CLI + Main
 # -------------------------------------------------------------------
 
-def main() -> None:
-    ensure_output_dir(OUTPUT_DIR)
+def parse_args():
+  parser = argparse.ArgumentParser(
+      description="Build iNaturalist-based vocab JSONs for faunistics quiz."
+  )
+  parser.add_argument(
+      "--mode",
+      choices=["basic", "extended"],
+      default="basic",
+      help="Which vocab set to build (controls top_n and output folder).",
+  )
+  return parser.parse_args()
 
-    for cfg in TAXA_CONFIG:
+
+def main() -> None:
+    args = parse_args()
+    mode = args.mode
+    taxa_config = get_taxa_config(mode)
+
+    output_dir = os.path.join(BASE_OUTPUT_DIR, mode)
+    ensure_output_dir(output_dir)
+
+    print(f"Building vocab in mode='{mode}', output_dir='{output_dir}'")
+
+    for cfg in taxa_config:
         label = cfg["label"]
         taxon_ids = cfg["taxon_ids"]
         top_n = cfg.get("top_n", DEFAULT_TOP_N)
@@ -509,12 +580,12 @@ def main() -> None:
             top_n=top_n,
         )
 
-        out_path = os.path.join(OUTPUT_DIR, f"{label}_vocab_sweden.json")
+        out_path = os.path.join(output_dir, f"{label}_vocab_sweden.json")
         write_json(vocab, out_path)
 
         print(f"  -> wrote {len(vocab)} entries to {out_path}")
 
-    print("\nDone. Commit the JSON files in 'data/' to your GitHub repo.")
+    print(f"\nDone. Mode='{mode}'. Commit the JSON files in '{output_dir}' to your repo.")
 
 
 if __name__ == "__main__":

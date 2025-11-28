@@ -438,5 +438,115 @@
       "licenseCode": "cc-by-nc",
       "obsUrl": "https://www.inaturalist.org/observations/325838336"
     }
+  },
+  {
+    "scientificName": "Martes martes",
+    "swedishName": "mård",
+    "genusName": "Martes",
+    "familyName": "Mustelidae",
+    "familyScientificName": "Mustelidae",
+    "familySwedishName": "mårddjur",
+    "orderScientificName": "Carnivora",
+    "orderSwedishName": "rovdjur",
+    "classScientificName": "Mammalia",
+    "classSwedishName": "Däggdjur",
+    "rank": "species",
+    "taxonId": 41796,
+    "obsCount": 61,
+    "exampleObservation": {
+      "obsId": 318821058,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/576254553/large.jpg",
+      "observer": "hasselsnoken",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/318821058"
+    }
+  },
+  {
+    "scientificName": "Apodemus sylvaticus",
+    "swedishName": "mindre skogsmus",
+    "genusName": "Apodemus",
+    "familyName": "Muridae",
+    "familyScientificName": "Muridae",
+    "familySwedishName": "råttdjur",
+    "orderScientificName": "Rodentia",
+    "orderSwedishName": "gnagare",
+    "classScientificName": "Mammalia",
+    "classSwedishName": "Däggdjur",
+    "rank": "species",
+    "taxonId": 45562,
+    "obsCount": 61,
+    "exampleObservation": {
+      "obsId": 325049591,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/588453247/large.jpg",
+      "observer": "ajmt",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325049591"
+    }
+  },
+  {
+    "scientificName": "Talpa europaea",
+    "swedishName": "Mullvad",
+    "genusName": "Talpa",
+    "familyName": "Talpidae",
+    "familyScientificName": "Talpidae",
+    "familySwedishName": "mullvadsdjur",
+    "orderScientificName": "Eulipotyphla",
+    "orderSwedishName": "äkta insektsätare",
+    "classScientificName": "Mammalia",
+    "classSwedishName": "Däggdjur",
+    "rank": "species",
+    "taxonId": 46970,
+    "obsCount": 59,
+    "exampleObservation": {
+      "obsId": 325879229,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/590105802/large.jpg",
+      "observer": "andreass1",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325879229"
+    }
+  },
+  {
+    "scientificName": "Cervus elaphus",
+    "swedishName": "Kronhjort",
+    "genusName": "Cervus",
+    "familyName": "Cervidae",
+    "familyScientificName": "Cervidae",
+    "familySwedishName": "hjortdjur",
+    "orderScientificName": "Artiodactyla",
+    "orderSwedishName": "partåiga hovdjur",
+    "classScientificName": "Mammalia",
+    "classSwedishName": "Däggdjur",
+    "rank": "species",
+    "taxonId": 204113,
+    "obsCount": 54,
+    "exampleObservation": {
+      "obsId": 328027625,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/594329648/large.jpg",
+      "observer": "tim-tas",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/328027625"
+    }
+  },
+  {
+    "scientificName": "Lutra lutra",
+    "swedishName": "Utter",
+    "genusName": "Lutra",
+    "familyName": "Mustelidae",
+    "familyScientificName": "Mustelidae",
+    "familySwedishName": "mårddjur",
+    "orderScientificName": "Carnivora",
+    "orderSwedishName": "rovdjur",
+    "classScientificName": "Mammalia",
+    "classSwedishName": "Däggdjur",
+    "rank": "species",
+    "taxonId": 41850,
+    "obsCount": 51,
+    "exampleObservation": {
+      "obsId": 328408342,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595087662/large.jpg",
+      "observer": "aalbertrebergen",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/328408342"
+    }
   }
 ]

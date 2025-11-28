@@ -658,5 +658,225 @@
       "licenseCode": "cc-by-nc",
       "obsUrl": "https://www.inaturalist.org/observations/323618898"
     }
+  },
+  {
+    "scientificName": "Ramalina fastigiata",
+    "swedishName": "rosettbrosklav",
+    "genusName": "Ramalina",
+    "familyName": "Ramalinaceae",
+    "familyScientificName": "Ramalinaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 229764,
+    "obsCount": 136,
+    "exampleObservation": {
+      "obsId": 327509395,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593355195/large.jpg",
+      "observer": "meask",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/327509395"
+    }
+  },
+  {
+    "scientificName": "Aspicilia cinerea",
+    "swedishName": "gråstenslav",
+    "genusName": "Aspicilia",
+    "familyName": "Megasporaceae",
+    "familyScientificName": "Megasporaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Pertusariales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 182439,
+    "obsCount": 135,
+    "exampleObservation": {
+      "obsId": 10368036,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/13459233/large.jpg",
+      "observer": "vilseskog",
+      "licenseCode": "cc-by-sa",
+      "obsUrl": "https://www.inaturalist.org/observations/10368036"
+    }
+  },
+  {
+    "scientificName": "Parmeliopsis ambigua",
+    "swedishName": "Stocklav",
+    "genusName": "Parmeliopsis",
+    "familyName": "Parmeliaceae",
+    "familyScientificName": "Parmeliaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 182652,
+    "obsCount": 134,
+    "exampleObservation": {
+      "obsId": 322059785,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/582542621/large.jpg",
+      "observer": "meask",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/322059785"
+    }
+  },
+  {
+    "scientificName": "Cladonia coniocraea",
+    "swedishName": "mjölig trattlav",
+    "genusName": "Cladonia",
+    "familyName": "Cladoniaceae",
+    "familyScientificName": "Cladoniaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 155093,
+    "obsCount": 125,
+    "exampleObservation": {
+      "obsId": 318858078,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/576314508/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/318858078"
+    }
+  },
+  {
+    "scientificName": "Physconia distorta",
+    "swedishName": "dagglav",
+    "genusName": "Physconia",
+    "familyName": "Physciaceae",
+    "familyScientificName": "Physciaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Caliciales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 182721,
+    "obsCount": 120,
+    "exampleObservation": {
+      "obsId": 323018935,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/584440233/large.jpg",
+      "observer": "johan8153",
+      "licenseCode": "cc-by",
+      "obsUrl": "https://www.inaturalist.org/observations/323018935"
+    }
+  },
+  {
+    "scientificName": "Melanelixia glabratula",
+    "swedishName": "stiftbrunlav",
+    "genusName": "Melanelixia",
+    "familyName": "Parmeliaceae",
+    "familyScientificName": "Parmeliaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 463479,
+    "obsCount": 120,
+    "exampleObservation": {
+      "obsId": 321245678,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/580947679/large.jpg",
+      "observer": "emilialennartsson",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/321245678"
+    }
+  },
+  {
+    "scientificName": "Hypogymnia tubulosa",
+    "swedishName": "Pukstockslav",
+    "genusName": "Hypogymnia",
+    "familyName": "Parmeliaceae",
+    "familyScientificName": "Parmeliaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 179720,
+    "obsCount": 118,
+    "exampleObservation": {
+      "obsId": 322192494,
+      "photoUrl": "https://static.inaturalist.org/photos/582809378/large.jpg",
+      "observer": "nature_yb",
+      "licenseCode": null,
+      "obsUrl": "https://www.inaturalist.org/observations/322192494"
+    }
+  },
+  {
+    "scientificName": "Alectoria sarmentosa",
+    "swedishName": "garnlav",
+    "genusName": "Alectoria",
+    "familyName": "Parmeliaceae",
+    "familyScientificName": "Parmeliaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 126626,
+    "obsCount": 113,
+    "exampleObservation": {
+      "obsId": 323522365,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/585405040/large.jpg",
+      "observer": "marelf",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/323522365"
+    }
+  },
+  {
+    "scientificName": "Protoparmeliopsis muralis",
+    "swedishName": "Kvartslav",
+    "genusName": "Protoparmeliopsis",
+    "familyName": "Lecanoraceae",
+    "familyScientificName": "Lecanoraceae",
+    "familySwedishName": null,
+    "orderScientificName": "Lecanorales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 632126,
+    "obsCount": 111,
+    "exampleObservation": {
+      "obsId": 325487712,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/589324591/large.jpg",
+      "observer": "magnus_stenmark",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/325487712"
+    }
+  },
+  {
+    "scientificName": "Rhizocarpon lecanorinum",
+    "swedishName": "Kragkartlav",
+    "genusName": "Rhizocarpon",
+    "familyName": "Rhizocarpaceae",
+    "familyScientificName": "Rhizocarpaceae",
+    "familySwedishName": null,
+    "orderScientificName": "Rhizocarpales",
+    "orderSwedishName": null,
+    "classScientificName": "Lecanoromycetes",
+    "classSwedishName": null,
+    "rank": "species",
+    "taxonId": 229961,
+    "obsCount": 106,
+    "exampleObservation": {
+      "obsId": 291301460,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/524104041/large.jpg",
+      "observer": "meask",
+      "licenseCode": "cc-by-nc",
+      "obsUrl": "https://www.inaturalist.org/observations/291301460"
+    }
   }
 ]

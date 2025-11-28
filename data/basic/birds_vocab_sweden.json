@@ -102,11 +102,11 @@
     "taxonId": 6921,
     "obsCount": 1563,
     "exampleObservation": {
-      "obsId": 327671068,
-      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593669543/large.jpg",
-      "observer": "tim-tas",
+      "obsId": 328601422,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595484849/large.jpg",
+      "observer": "elias_putzhammer",
       "licenseCode": "cc-by-nc",
-      "obsUrl": "https://www.inaturalist.org/observations/327671068"
+      "obsUrl": "https://www.inaturalist.org/observations/328601422"
     }
   },
   {
@@ -322,11 +322,11 @@
     "taxonId": 4270,
     "obsCount": 1159,
     "exampleObservation": {
-      "obsId": 327699472,
-      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/593722418/large.jpg",
-      "observer": "ocesel",
+      "obsId": 328601802,
+      "photoUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/595485348/large.jpg",
+      "observer": "elias_putzhammer",
       "licenseCode": "cc-by-nc",
-      "obsUrl": "https://www.inaturalist.org/observations/327699472"
+      "obsUrl": "https://www.inaturalist.org/observations/328601802"
     }
   },
   {
