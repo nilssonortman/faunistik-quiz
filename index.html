@@ -9,14 +9,7 @@
 <body>
   <div id="app">
     <header>
-      <h1>Faunistics Quiz</h1>
-      <p class="small">
-        Photos and IDs from iNaturalist course projects.
-      </p>
-      <p class="small">
-        <strong>Tip:</strong> You can select which project to use with
-        <code>?project=slug-here</code> in the URL.
-      </p>
+      <h1>Floristik och Faunistik-quiz</h1>
       <p class="small">
         <label for="level-select">Nivå:</label>
         <select id="level-select">
@@ -24,18 +17,18 @@
             <option value="genus">Släkte</option>
             <option value="family">Familj</option>
         </select>
-        <label for="distractor-scope-select">Felalternativens släktskap:</label>
+        <label for="distractor-scope-select">Felalternativ:</label>
         <select id="distractor-scope-select">
-            <option value="group">Bred grupp</option>
+            <option value="group">Samma breda grupp</option>
             <option value="order">Samma ordning om möjligt</option>
             <option value="family">Samma familj om möjligt</option>
         </select>
-        <label for="vocab-set-select">Omfattning:</label>
+        <label for="vocab-set-select">Antal arter:</label>
         <select id="vocab-set-select">
             <option value="basic">Grundlista</option>
             <option value="extended">Utökad taxalista</option>
         </select>
-        <label for="data-source-select">Källa:</label>
+        <label for="data-source-select">Ta bilder från:</label>
         <select id="data-source-select">
           <option value="inat">iNaturalist (Sverige)</option>
           <option value="course">Kursprojekt 2025</option>
@@ -44,7 +37,7 @@
     </header>
 
     <main>
-      <div id="status">Loading observations from iNaturalist…</div>
+      <div id="status">Laddar observationer från iNaturalist…</div>
 
       <div id="controls" class="hidden">
         <div id="progress"></div>
@@ -67,7 +60,7 @@
     <footer>
       <p class="small">
         Data from iNaturalist via public API. Only observations and photos with
-        reuse-friendly licenses (CC0, CC-BY, CC-BY-NC) are used.
+        reuse-friendly licenses (CC0, CC-BY, CC-BY-NC) are used. Only research-grade observations.
       </p>
     </footer>
   </div>

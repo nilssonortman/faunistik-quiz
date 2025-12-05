@@ -8,7 +8,7 @@
 
 // ---------------- CONFIG ----------------------------------------------
 const CONFIG = {
-  QUESTIONS_COUNT: 10,
+  QUESTIONS_COUNT: 20,
   OPTIONS_PER_QUESTION: 4,
 
   VOCAB_SETS: {
